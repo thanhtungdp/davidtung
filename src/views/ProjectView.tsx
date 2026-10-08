@@ -4,7 +4,6 @@ import { getDictionary } from "@/i18n";
 import { localePath, type Locale } from "@/i18n/config";
 import { getEntries } from "@/lib/content";
 import type { Project } from "@/content/projects";
-import { contact } from "@/content/pages";
 import { CaseHeroArt } from "@/components/mockups/CaseHeroArt";
 import { Reveal, SplitWords, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Tilt } from "@/components/motion/Tilt";
@@ -49,7 +48,7 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{c.lede}</p>
             </Reveal>
             <Reveal delay={0.4} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <ButtonLink href={contact.mailto}>{t.project.discuss}</ButtonLink>
+              <ButtonLink href={localePath(locale, "/booking/")}>{t.project.discuss}</ButtonLink>
               <ButtonLink href="#how" variant="ghost" arrow={false} className={`!border-transparent ${tintBg[project.tint]}`}>
                 {t.project.how}
               </ButtonLink>
@@ -102,7 +101,7 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
             <p className="text-lg leading-relaxed text-muted">
               <span className="font-bold text-fg">{c.closingTitle}</span> {c.closingBody}
             </p>
-            <a href={contact.mailto} className="mt-4 inline-flex items-center gap-1.5 border-b-2 border-brand pb-0.5 font-semibold">
+            <a href={localePath(locale, "/booking/")} className="mt-4 inline-flex items-center gap-1.5 border-b-2 border-brand pb-0.5 font-semibold">
               {t.project.learnMore} <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </Reveal>
@@ -163,7 +162,7 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
         </div>
       </section>
 
-      <CtaBand t={t.cta} secondaryHref={localePath(locale, "/playbooks/")} />
+      <CtaBand t={t.cta} primaryHref={localePath(locale, "/booking/")} secondaryHref={localePath(locale, "/playbooks/")} />
     </>
   );
 }

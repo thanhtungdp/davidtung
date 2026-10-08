@@ -60,7 +60,7 @@ export function AboutView({ locale }: { locale: Locale }) {
         </Reveal>
       </section>
 
-      <CtaBand t={t.cta} secondaryHref={localePath(locale, "/blog/")} />
+      <CtaBand t={t.cta} primaryHref={localePath(locale, "/booking/")} secondaryHref={localePath(locale, "/blog/")} />
     </>
   );
 }

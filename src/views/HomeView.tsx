@@ -22,7 +22,7 @@ export function HomeView({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <Hero t={t} casesHref="#cases" />
+      <Hero t={t} casesHref="#cases" bookingHref={p("/booking/")} />
       <TrustBar label={t.trust.label} />
       <SolutionOverview locale={locale} />
       <Stats t={t.stats} locale={locale} />
@@ -60,7 +60,7 @@ export function HomeView({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <CtaBand t={t.cta} secondaryHref={p("/playbooks/")} />
+      <CtaBand t={t.cta} primaryHref={localePath(locale, "/booking/")} secondaryHref={p("/playbooks/")} />
     </>
   );
 }

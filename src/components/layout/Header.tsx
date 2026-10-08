@@ -36,7 +36,6 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
 
   const p = (path: string) => localePath(locale, path);
   const links = [
-    { href: `${p("/")}#solutions`, label: t.solutions },
     { href: p("/playbooks/"), label: t.playbooks },
     { href: p("/blog/"), label: t.blog },
     { href: p("/hermes/"), label: t.hermes },
@@ -98,7 +97,7 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
           <LanguageSwitch locale={locale} label={t.language} />
           <ThemeToggle label={t.theme} />
           <a
-            href={contact.mailto}
+            href={p("/booking/")}
             className="hidden h-11 items-center gap-1.5 whitespace-nowrap rounded-full bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong md:inline-flex"
           >
             {t.contact}

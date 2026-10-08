@@ -11,6 +11,7 @@ export const hermesPage: Record<
     titleB: string;
     lede: string;
     cta: string;
+    see: string;
     pillars: { title: string; body: string }[];
     toolsTitle: string;
     toolsBody: string;
@@ -24,8 +25,6 @@ export const hermesPage: Record<
     after: { label: string; items: string[] };
     costTitle: string;
     costs: { value: string; label: string }[];
-    briefTitle: string;
-    brief: string[];
   }
 > = {
   vi: {
@@ -35,6 +34,7 @@ export const hermesPage: Record<
     titleB: "thành agent tự chạy trong 4 tuần.",
     lede: "AI giúp bạn viết nhanh hơn. Nhưng vẫn là bạn ngồi làm. Hermes giúp bạn xây một đội AI tự chạy việc lặp lại, tự học mỗi ngày — để bạn vận hành như có cả một phòng ban.",
     cta: "Bắt đầu với Hermes",
+    see: "Xem 5 agent làm việc",
     pillars: [
       { title: "Ra lệnh, không thao tác", body: "Một câu qua Telegram. Agent tự tạo báo giá, gửi email, lên content — không cần mở 10 tab." },
       { title: "Việc lặp tự chạy", body: "Mỗi lần xử lý xong một việc, agent tự ghi lại cách làm. Lần sau gặp việc tương tự, nó tự nhớ." },
@@ -68,13 +68,6 @@ export const hermesPage: Record<
       { value: "8h", label: "mỗi ngày cho việc admin lặp đi lặp lại" },
       { value: "30+", label: "tin báo giá lặp lại cần trả mỗi ngày" },
     ],
-    briefTitle: "Briefing sáng · Thứ Ba",
-    brief: [
-      "3 lead nóng cần phản hồi trước trưa.",
-      "2 báo giá quá hạn follow-up — Funnel đã nhắc.",
-      "Post Facebook 19h đã lên lịch, chờ duyệt.",
-      "Doanh thu tuần: +18% so tuần trước.",
-    ],
   },
   en: {
     eyebrow: "An autonomous AI team for Solo CEOs",
@@ -83,6 +76,7 @@ export const hermesPage: Record<
     titleB: "into self-running agents in 4 weeks.",
     lede: "AI helps you write faster. But you're still the one doing the work. Hermes helps you build an AI team that runs repetitive tasks and learns every day — so you operate like you have a whole department.",
     cta: "Start with Hermes",
+    see: "See the 5 agents at work",
     pillars: [
       { title: "Command, don't click", body: "One message on Telegram. The agent drafts quotes, sends emails, schedules content — no ten open tabs." },
       { title: "Repetitive work runs itself", body: "Each time it finishes a task, the agent records how. Next time, it remembers — no re-teaching." },
@@ -115,13 +109,6 @@ export const hermesPage: Record<
       { value: "↓45%", label: "CEO productivity when writing content themselves" },
       { value: "8h", label: "per day on repetitive admin" },
       { value: "30+", label: "repeat quote requests to answer daily" },
-    ],
-    briefTitle: "Morning briefing · Tuesday",
-    brief: [
-      "3 hot leads need a reply before noon.",
-      "2 overdue quote follow-ups — Funnel sent reminders.",
-      "7pm Facebook post scheduled, awaiting approval.",
-      "Weekly revenue: +18% vs last week.",
     ],
   },
 };

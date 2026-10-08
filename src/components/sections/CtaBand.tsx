@@ -4,7 +4,7 @@ import { Swoosh } from "@/components/motion/Swoosh";
 import { ButtonLink } from "@/components/ui/Button";
 import { contact } from "@/content/pages";
 
-export function CtaBand({ t, secondaryHref }: { t: Dictionary["cta"]; secondaryHref: string }) {
+export function CtaBand({ t, secondaryHref, primaryHref = contact.mailto }: { t: Dictionary["cta"]; secondaryHref: string; primaryHref?: string }) {
   return (
     <section className="container-x pt-12">
       <Reveal>
@@ -18,7 +18,7 @@ export function CtaBand({ t, secondaryHref }: { t: Dictionary["cta"]; secondaryH
             <h2 className="display mx-auto max-w-3xl text-4xl sm:text-6xl">{t.title}</h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">{t.body}</p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <ButtonLink href={contact.mailto}>{t.primary}</ButtonLink>
+              <ButtonLink href={primaryHref}>{t.primary}</ButtonLink>
               <ButtonLink href={secondaryHref} variant="light" arrow={false}>
                 {t.secondary}
               </ButtonLink>

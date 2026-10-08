@@ -6,7 +6,6 @@ const vi = {
   },
   nav: {
     home: "Trang chủ",
-    solutions: "Giải pháp",
     more: "Thêm",
     theme2: "Giao diện tối",
     cases: "Case study",

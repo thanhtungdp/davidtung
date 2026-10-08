@@ -1,13 +1,12 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll, type PanInfo } from "motion/react";
-import { ArrowUpRight, BookOpen, Ellipsis, House, LayoutGrid, Moon, Newspaper, Sun } from "lucide-react";
+import { ArrowUpRight, BookOpen, Bot, Ellipsis, House, Moon, Newspaper, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { localePath, type Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n";
-import { contact } from "@/content/pages";
 import { LanguageSwitch } from "./LanguageSwitch";
 import type { NavProject } from "./Header";
 
@@ -41,9 +40,9 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
   const home = p("/");
   const tabs = [
     { href: home, label: t.home, icon: House },
-    { href: `${p("/")}#solutions`, label: t.solutions, icon: LayoutGrid },
     { href: p("/playbooks/"), label: t.playbooks, icon: BookOpen },
     { href: p("/blog/"), label: t.blog, icon: Newspaper },
+    { href: p("/hermes/"), label: t.hermes, icon: Bot },
   ];
   const activeIndex = sheet
     ? tabs.length
@@ -52,6 +51,9 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
         if (i >= 0) return i;
         return pathname === home ? 0 : tabs.length; // other pages live under "More"
       })();
+
+  // The booking survey has its own bottom navigation
+  if (/\/booking\/?$/.test(pathname)) return null;
 
   const items = [...tabs.map((tab) => ({ ...tab, onClick: undefined as (() => void) | undefined })), { href: "", label: t.more, icon: Ellipsis, onClick: () => setSheet((v) => !v) }];
 
@@ -157,11 +159,8 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
                   </motion.li>
                 ))}
               </ul>
-              <div className="mt-3 grid grid-cols-2 gap-2">
-                {[
-                  { href: p("/hermes/"), label: t.hermes },
-                  { href: p("/about/"), label: t.about },
-                ].map((l) => (
+              <div className="mt-3 grid gap-2">
+                {[{ href: p("/about/"), label: t.about }].map((l) => (
                   <Link key={l.href} href={l.href} className="flex h-12 items-center justify-center rounded-2xl bg-elev/70 font-semibold active:scale-[0.98]">
                     {l.label}
                   </Link>
@@ -185,10 +184,10 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
                   {t.theme2}
                 </button>
               </div>
-              <a href={contact.mailto} className="mt-3 flex h-12 items-center justify-center gap-1.5 rounded-full bg-brand font-semibold text-white">
+              <Link href={p("/booking/")} className="mt-3 flex h-12 items-center justify-center gap-1.5 rounded-full bg-brand font-semibold text-white">
                 {t.contact}
                 <ArrowUpRight className="size-4" aria-hidden="true" />
-              </a>
+              </Link>
             </motion.div>
           </>
         )}

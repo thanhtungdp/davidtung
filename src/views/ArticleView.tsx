@@ -97,7 +97,7 @@ export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; loc
           </div>
         </section>
       )}
-      <CtaBand t={t.cta} secondaryHref={localePath(locale, "/playbooks/")} />
+      <CtaBand t={t.cta} primaryHref={localePath(locale, "/booking/")} secondaryHref={localePath(locale, "/playbooks/")} />
     </>
   );
 }

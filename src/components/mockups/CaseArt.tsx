@@ -25,6 +25,7 @@ import {
   Users,
   Wifi,
 } from "lucide-react";
+import { hermesArts } from "./HermesArt";
 import { Bar, In, Panel } from "./SolutionArt";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -47,7 +48,8 @@ export type CaseArtKey =
   | "publicAqi"
   | "lessonOutline"
   | "quizFeedback"
-  | "viewsChart";
+  | "viewsChart"
+  | keyof typeof hermesArts;
 
 type P = { vi: boolean };
 
@@ -587,6 +589,7 @@ const map: Record<CaseArtKey, (p: P) => React.ReactElement> = {
   lessonOutline: LessonOutline,
   quizFeedback: QuizFeedback,
   viewsChart: ViewsChart,
+  ...hermesArts,
 };
 
 /** A product prototype for one step of a case study, bleeding off the bottom of its tinted frame. */

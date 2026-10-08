@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/playbooks/",
     "/hermes/",
     "/about/",
+    "/booking/",
     ...projects.map((p) => `/projects/${p.slug}/`),
     ...getEntries("blog", "vi").map((e) => `/blog/${e.slug}/`),
     ...getEntries("playbooks", "vi").map((e) => `/playbooks/${e.slug}/`),

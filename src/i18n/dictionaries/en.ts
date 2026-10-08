@@ -8,7 +8,6 @@ const en: Dictionary = {
   },
   nav: {
     home: "Home",
-    solutions: "Solutions",
     more: "More",
     theme2: "Dark mode",
     cases: "Case studies",

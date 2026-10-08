@@ -4,9 +4,8 @@ import { Reveal, SplitWords } from "@/components/motion/Reveal";
 import { Swoosh } from "@/components/motion/Swoosh";
 import { Tilt } from "@/components/motion/Tilt";
 import { ButtonLink } from "@/components/ui/Button";
-import { contact } from "@/content/pages";
 
-export function Hero({ t, casesHref }: { t: Dictionary; casesHref: string }) {
+export function Hero({ t, casesHref, bookingHref }: { t: Dictionary; casesHref: string; bookingHref: string }) {
   const h = t.hero;
   return (
     <section className="relative overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-24 lg:pt-40">
@@ -47,7 +46,7 @@ export function Hero({ t, casesHref }: { t: Dictionary; casesHref: string }) {
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted lg:mx-0">{h.lede}</p>
           </Reveal>
           <Reveal delay={0.65} className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
-            <ButtonLink href={contact.mailto}>{h.primary}</ButtonLink>
+            <ButtonLink href={bookingHref}>{h.primary}</ButtonLink>
             <ButtonLink href={casesHref} variant="ghost" arrow={false}>
               {h.secondary}
             </ButtonLink>

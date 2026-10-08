@@ -1,5 +1,4 @@
-import type { Locale } from "@/i18n/config";
-import { contact } from "@/content/pages";
+import { localePath, type Locale } from "@/i18n/config";
 import { solutionsPage } from "@/content/solutions";
 import { Reveal } from "@/components/motion/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
@@ -25,7 +24,7 @@ export function SolutionOverview({ locale }: { locale: Locale }) {
             <SolutionGrid locale={locale} />
           </div>
           <Reveal className="mt-12 flex justify-center">
-            <ButtonLink href={contact.mailto}>{s.tour}</ButtonLink>
+            <ButtonLink href={localePath(locale, "/booking/")}>{s.tour}</ButtonLink>
           </Reveal>
         </div>
       </div>
