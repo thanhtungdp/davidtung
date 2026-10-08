@@ -1,0 +1,176 @@
+import type { Dictionary } from "./vi";
+
+const en: Dictionary = {
+  meta: {
+    title: "David Tung — Simple & More X10",
+    description:
+      "David Tung Phan helps leadership teams turn data, sales workflows, and AI agents into operating systems for growth.",
+  },
+  nav: {
+    cases: "Case studies",
+    casesLead: "Systems already running at scale",
+    playbooks: "Playbooks",
+    blog: "Blog",
+    hermes: "AI Agent",
+    about: "About",
+    contact: "Let's talk",
+    menu: "Open menu",
+    close: "Close menu",
+    theme: "Toggle light/dark theme",
+    language: "Language",
+    skip: "Skip to content",
+  },
+  hero: {
+    eyebrow: "Operator / Builder · Open to advisory",
+    titleA: "Turn strategy into an",
+    titleHighlight: "operating system",
+    titleB: "that runs on AI.",
+    lede:
+      "I help leadership teams turn data, sales workflows, and AI agents into a real growth rhythm. Built from SaaS, IoT, and AI products running at scale.",
+    primary: "Discuss AI & operations",
+    secondary: "See case studies",
+  },
+  mockup: {
+    app: "Simplamo OS",
+    period: "Q4 · Week 6",
+    okrTitle: "Company objectives",
+    okrs: [
+      { label: "Grow dealer-channel revenue", value: 78 },
+      { label: "Roll out AI agents for Sales", value: 64 },
+      { label: "Standardize 4DX meeting rhythm", value: 91 },
+    ],
+    kpiTitle: "Weekly revenue",
+    kpiValue: "$5.6K",
+    kpiDelta: "+18%",
+    aiChip: "Sale AI generated a quote",
+    aiChipMeta: "42 seconds · #BG-204",
+    iotChip: "IoT stations online",
+    briefChip: "7:00 briefing sent",
+  },
+  trust: {
+    label: "Deployed with enterprises and public agencies across Vietnam and the region",
+  },
+  stats: {
+    eyebrow: "Real scale",
+    title: "Not a demo. Systems that run every single day.",
+    items: [
+      { value: 1, suffix: "M+", label: "learners reached" },
+      { value: 1000, suffix: "+", label: "IoT monitoring stations" },
+      { value: 200, suffix: "K", label: "Simplamo users" },
+      { value: 2000, suffix: "", label: "dealers on Sale AI" },
+    ],
+  },
+  cases: {
+    eyebrow: "Proof in production",
+    title: "Systems already running at scale",
+    lede: "Every product starts from a concrete operating problem and is measured by adoption, not by slides.",
+    cta: "View case study",
+  },
+  services: {
+    eyebrow: "Strategy to operational AI",
+    title: "One system, four levers",
+    lede: "I don't sell features. I design operating rhythms so goals, data, and AI all pull toward one outcome.",
+    items: [
+      {
+        key: "ops",
+        tab: "Operations",
+        title: "Operating rhythm with OKRs, BSC/KPI, and 4DX",
+        body: "Turn strategy into goals linked from company to every team, with dashboards and weekly meetings so everyone sees the same picture.",
+        bullets: ["OGSM · BSC · OKRs · 4DX", "Executive dashboards", "Meeting rhythm & accountability"],
+      },
+      {
+        key: "ai",
+        tab: "AI agents",
+        title: "AI agents inside real workflows",
+        body: "Place agents at the exact friction points of sales, operations, and data — with clear permissions, human review of exceptions, and KPIs to improve.",
+        bullets: ["Sales & quoting", "Automated briefings & reports", "SAP/CRM/Sheets integration"],
+      },
+      {
+        key: "coaching",
+        tab: "Coaching",
+        title: "Coaching leaders to decide faster with AI",
+        body: "Work with CEOs and product teams to build an AI-operator mindset: command instead of click, measure outcomes instead of activity.",
+        bullets: ["1:1 for CEO & C-level", "Product team workshops", "AI model routing"],
+      },
+      {
+        key: "delivery",
+        tab: "Execution",
+        title: "Hands-on until it runs",
+        body: "From goals, owners, and metrics to a weekly review cadence — I stay until the system runs on its own, without depending on the founder.",
+        bullets: ["4–12 week roadmap", "Clear owners & metrics", "Handover to self-running"],
+      },
+    ],
+  },
+  process: {
+    eyebrow: "How I work",
+    title: "Four steps, one straight road to results",
+    steps: [
+      { title: "Diagnose", body: "Find the biggest friction between strategy and daily operations." },
+      { title: "Design", body: "Goals, data, permissions, and the role of AI in one blueprint." },
+      { title: "Deploy", body: "Ship into the weekly rhythm with clear owners and agents running repetitive work." },
+      { title: "Measure & improve", body: "Track adoption and outcomes, improving weekly until it runs itself." },
+    ],
+  },
+  hermes: {
+    eyebrow: "Hermes · Autonomous AI team",
+    title: "Turn repetitive work into self-running agents in 4 weeks.",
+    body: "AI helps you write faster — but you're still the one doing the work. Hermes helps Solo CEOs build an AI team that runs repetitive tasks and learns every day.",
+    cta: "Explore Hermes",
+  },
+  playbooks: {
+    eyebrow: "Playbooks",
+    title: "Field manuals for Solo CEOs",
+    lede: "Source-checked analysis, written to be used by your team right away.",
+    cta: "All playbooks",
+    read: "Read playbook",
+    pages: "pages",
+  },
+  notes: {
+    eyebrow: "Execution notes",
+    title: "Lessons from AI, product, and operations",
+    cta: "View all notes",
+    read: "Read article",
+  },
+  cta: {
+    title: "Ready to turn AI into your operating rhythm?",
+    body: "A 30-minute conversation to find the biggest point of friction in your business.",
+    primary: "Book a conversation",
+    secondary: "Read playbooks",
+  },
+  footer: {
+    tagline: "AI, product, and operating systems for growth teams.",
+    location: "Ho Chi Minh City, Vietnam",
+    explore: "Explore",
+    work: "Case studies",
+    connect: "Connect",
+    rights: "All rights reserved.",
+  },
+  blog: {
+    title: "Execution notes",
+    lede: "Context, problem, execution, and lessons — on AI, product, and running a business.",
+    all: "All",
+    minutes: "min read",
+    toc: "On this page",
+    related: "Keep reading",
+    back: "Back to blog",
+    share: "Share",
+  },
+  project: {
+    role: "Role",
+    discuss: "Discuss this project",
+    others: "More case studies",
+    back: "All case studies",
+  },
+  playbookPage: {
+    title: "Playbooks",
+    lede: "Technical playbooks for Solo CEOs and business owners — field-tested analysis with verifiable sources.",
+    back: "All playbooks",
+  },
+  notFound: {
+    title: "This road hasn't been paved yet.",
+    body: "The page you're looking for doesn't exist or has moved.",
+    home: "Back to home",
+  },
+};
+
+export default en;
