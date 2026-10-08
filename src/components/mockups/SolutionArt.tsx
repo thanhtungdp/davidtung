@@ -20,7 +20,7 @@ const ease = [0.16, 1, 0.3, 1] as const;
 const view = { once: true, margin: "-40px" } as const;
 
 /** Fades children up when the card scrolls into view. */
-function In({ children, className, delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+export function In({ children, className, delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   return (
     <motion.div
       className={`h-full ${className ?? ""}`}
@@ -35,7 +35,7 @@ function In({ children, className, delay = 0 }: { children: React.ReactNode; cla
 }
 
 /** White app panel that bleeds off the bottom of the card, like Lattice. */
-function Panel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export function Panel({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <div className={`rounded-t-2xl border border-b-0 border-black/5 bg-elev p-4 shadow-[0_20px_50px_-20px_rgb(0_0_0/0.25)] dark:border-white/10 ${className}`}>
       {children}
@@ -43,7 +43,7 @@ function Panel({ children, className = "" }: { children: React.ReactNode; classN
   );
 }
 
-function Bar({ value, delay = 0 }: { value: number; delay?: number }) {
+export function Bar({ value, delay = 0 }: { value: number; delay?: number }) {
   return (
     <div className="h-1.5 overflow-hidden rounded-full bg-sunken">
       <motion.div

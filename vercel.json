@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/solutions", "destination": "/#solutions", "permanent": false },
+    { "source": "/solutions/", "destination": "/#solutions", "permanent": false },
+    { "source": "/en/solutions", "destination": "/en/#solutions", "permanent": false },
+    { "source": "/en/solutions/", "destination": "/en/#solutions", "permanent": false }
+  ]
+}

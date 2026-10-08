@@ -11,7 +11,7 @@ export function Footer({ locale, t }: { locale: Locale; t: Dictionary }) {
     {
       title: t.footer.explore,
       links: [
-        { href: p("/solutions/"), label: t.nav.solutions },
+        { href: `${p("/")}#solutions`, label: t.nav.solutions },
         { href: p("/playbooks/"), label: t.nav.playbooks },
         { href: p("/blog/"), label: t.nav.blog },
         { href: p("/hermes/"), label: t.nav.hermes },

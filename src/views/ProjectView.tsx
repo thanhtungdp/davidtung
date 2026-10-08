@@ -1,75 +1,168 @@
+import Link from "next/link";
+import { ArrowRight, ChevronRight, Layers, ShieldCheck, Sparkles } from "lucide-react";
 import { getDictionary } from "@/i18n";
 import { localePath, type Locale } from "@/i18n/config";
+import { getEntries } from "@/lib/content";
 import type { Project } from "@/content/projects";
 import { contact } from "@/content/pages";
-import { ProjectVisualFor } from "@/components/mockups/Visuals";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { CaseHeroArt } from "@/components/mockups/CaseHeroArt";
+import { Reveal, SplitWords, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Tilt } from "@/components/motion/Tilt";
-import { CaseGrid } from "@/components/sections/CaseGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { PageHero } from "@/components/sections/PageHero";
-import { StickyStory } from "@/components/sections/StickyStory";
+import { PostCard } from "@/components/sections/EntryCards";
+import { FeatureStack } from "@/components/sections/FeatureStack";
+import { PlaybookCard2 } from "@/components/sections/PlaybookLibrary";
+import { tintBg } from "@/components/sections/SolutionGrid";
+import { CaseStories } from "@/components/sections/CaseStories";
 import { ButtonLink } from "@/components/ui/Button";
 
+const miniTints = ["bg-tint-orange", "bg-tint-mint", "bg-tint-lilac"];
+const miniIcons = [Sparkles, ShieldCheck, Layers];
+
+/** Case study laid out like lattice.com/platform/performance. */
 export function ProjectView({ project, locale }: { project: Project; locale: Locale }) {
   const t = getDictionary(locale);
   const c = project.copy[locale];
 
+  const playbooks = getEntries("playbooks", locale).slice(0, 2);
+  const post = getEntries("blog", locale)[0];
+
   return (
     <>
-      <PageHero eyebrow={`${c.tag} · ${c.name}`} title={c.headline} lede={c.lede}>
-        <Reveal delay={0.4} className="mt-8 flex flex-wrap items-center gap-3">
-          <ButtonLink href={contact.mailto}>{t.project.discuss}</ButtonLink>
-          <span className="rounded-full border border-line px-4 py-2.5 text-sm font-semibold text-muted">
-            {t.project.role}: <span className="text-fg">{c.role}</span>
-          </span>
-        </Reveal>
-      </PageHero>
-
-      <section className="container-x">
-        <Reveal y={50}>
-          <div className="rounded-[2rem] bg-gradient-to-br from-brand via-[#ff8a3d] to-[#ffc79a] p-3 sm:p-8 dark:via-[#7a2e00] dark:to-[#1b1815]">
-            <Tilt max={3}>
-              <div className="grain relative h-80 overflow-hidden rounded-[1.4rem] bg-bg sm:h-[26rem]">
-                <div className="relative mx-auto h-full max-w-xl">
-                  <ProjectVisualFor visual={project.visual} locale={locale} />
-                </div>
-              </div>
-            </Tilt>
+      {/* 1 · Split hero with the product prototype */}
+      <section className="relative overflow-hidden pb-12 pt-32 sm:pt-36 lg:pb-16 lg:pt-40">
+        <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+          <div>
+            <Reveal y={8}>
+              <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-subtle">
+                <Link href={`${localePath(locale, "/")}#cases`} className="hover:text-fg">
+                  {t.project.crumb}
+                </Link>
+                <ChevronRight className="size-3.5" aria-hidden="true" />
+                <span className="text-fg">{c.name}</span>
+              </nav>
+            </Reveal>
+            <h1 className="display mt-6 text-[2.5rem] sm:text-5xl xl:text-6xl">
+              <SplitWords text={c.headline} />
+            </h1>
+            <Reveal delay={0.3}>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{c.lede}</p>
+            </Reveal>
+            <Reveal delay={0.4} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <ButtonLink href={contact.mailto}>{t.project.discuss}</ButtonLink>
+              <ButtonLink href="#how" variant="ghost" arrow={false} className={`!border-transparent ${tintBg[project.tint]}`}>
+                {t.project.how}
+              </ButtonLink>
+            </Reveal>
+            <Reveal delay={0.5}>
+              <p className="mt-6 text-sm text-subtle">
+                {t.project.role}: <span className="font-semibold text-fg">{c.role}</span>
+              </p>
+            </Reveal>
           </div>
-        </Reveal>
-        <Stagger className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-[1.5rem] border border-line bg-line lg:grid-cols-4">
-          {c.stats.map((s) => (
-            <StaggerItem key={s.label} className="bg-elev p-6 sm:p-8">
-              <p className="display text-4xl text-brand sm:text-5xl">{s.value}</p>
-              <p className="mt-2 text-sm text-muted">{s.label}</p>
+          <Reveal delay={0.3} y={40}>
+            <div className={`relative rounded-[1.75rem] p-4 sm:p-8 ${tintBg[project.tint]}`}>
+              <Tilt max={4}>
+                <CaseHeroArt visual={project.visual} locale={locale} mockup={t.mockup} />
+              </Tilt>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 2 · Proof strip */}
+      <section className="container-x pb-16">
+        <Stagger className="grid grid-cols-2 gap-y-8 border-y border-line py-8 lg:grid-cols-4">
+          {c.stats.map((st) => (
+            <StaggerItem key={st.label} className="px-2 text-center">
+              <p className="display text-3xl text-fg/80 sm:text-4xl">{st.value}</p>
+              <p className="mx-auto mt-1 max-w-[14rem] text-sm text-subtle">{st.label}</p>
             </StaggerItem>
           ))}
         </Stagger>
       </section>
 
-      <StickyStory title={c.storyTitle} lede={c.storyLede} steps={c.story} />
-
-      <section className="bg-invert py-20 text-invert-fg sm:py-28">
-        <div className="container-x">
-          <h2 className="display max-w-3xl text-4xl sm:text-5xl">{c.highlightsTitle}</h2>
-          <Stagger className="mt-12 grid gap-5 md:grid-cols-3">
-            {c.highlights.map((h, i) => (
-              <StaggerItem key={h.title} className="rounded-[1.5rem] border border-invert-fg/10 bg-invert-fg/[0.04] p-7">
-                <span className="display text-5xl italic text-brand">0{i + 1}</span>
-                <h3 className="mt-6 text-xl font-extrabold">{h.title}</h3>
-                <p className="mt-2 leading-relaxed text-invert-fg/65">{h.body}</p>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <Reveal className="mt-16 max-w-3xl border-l-4 border-brand pl-6">
-            <p className="text-2xl font-extrabold tracking-tight sm:text-3xl">{c.closingTitle}</p>
-            <p className="mt-3 text-lg leading-relaxed text-invert-fg/70">{c.closingBody}</p>
-          </Reveal>
+      {/* 3 · Sticky list + stacked prototypes */}
+      <section id="how" className="scroll-mt-20 px-2 sm:px-4">
+        <div className="mx-auto max-w-[90rem] rounded-[2.5rem] bg-sunken/70 py-14 sm:py-20">
+          <div className="container-x">
+            <FeatureStack title={c.storyTitle} lede={c.storyLede} steps={c.story} arts={project.storyArt} locale={locale} />
+          </div>
         </div>
       </section>
 
-      <CaseGrid t={t.cases} locale={locale} exclude={project.slug} title={t.project.others} />
+      {/* 4 · Highlights, like Lattice's "Habits" row */}
+      <section className="container-x py-20 sm:py-28">
+        <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
+          <Reveal>
+            <span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest ${tintBg[project.tint]}`}>{c.name}</span>
+            <h2 className="display mt-5 text-4xl sm:text-5xl">{c.highlightsTitle}</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-lg leading-relaxed text-muted">
+              <span className="font-bold text-fg">{c.closingTitle}</span> {c.closingBody}
+            </p>
+            <a href={contact.mailto} className="mt-4 inline-flex items-center gap-1.5 border-b-2 border-brand pb-0.5 font-semibold">
+              {t.project.learnMore} <ArrowRight className="size-4" aria-hidden="true" />
+            </a>
+          </Reveal>
+        </div>
+        <Stagger className="mt-12 grid gap-4 md:grid-cols-3">
+          {c.highlights.map((h, i) => {
+            const Icon = miniIcons[i % miniIcons.length];
+            return (
+              <StaggerItem key={h.title} className="overflow-hidden rounded-[1.5rem] border border-line bg-elev p-2">
+                <div className={`grid h-40 place-items-center rounded-[1.1rem] ${miniTints[i % miniTints.length]}`}>
+                  <div className="w-44 rounded-xl bg-elev p-3 shadow-[0_16px_40px_-16px_rgb(0_0_0/0.3)]">
+                    <div className="flex items-center gap-2">
+                      <span className="grid size-7 place-items-center rounded-lg bg-brand text-white">
+                        <Icon className="size-4" aria-hidden="true" />
+                      </span>
+                      <span className="min-w-0 flex-1 truncate text-[11px] font-bold">{h.title}</span>
+                    </div>
+                    <span className="mt-3 block h-2 w-full rounded-full bg-sunken" />
+                    <span className="mt-1.5 block h-2 w-2/3 rounded-full bg-sunken" />
+                    <span className="mt-2.5 flex items-center gap-1 text-[10px] font-bold text-emerald-600">
+                      <span className="size-1.5 rounded-full bg-emerald-500" /> {locale === "vi" ? "Đang vận hành" : "Running"}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-extrabold tracking-tight">{h.title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-muted">{h.body}</p>
+                </div>
+              </StaggerItem>
+            );
+          })}
+        </Stagger>
+      </section>
+
+      {/* 5 · Other case studies */}
+      <div className="-mt-20 sm:-mt-28">
+        <CaseStories locale={locale} exclude={project.slug} title={t.project.others} />
+      </div>
+
+      {/* 6 · Resources */}
+      <section className="container-x pb-12">
+        <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
+          <Reveal>
+            <span className="inline-flex rounded-full bg-sunken px-3 py-1 text-xs font-bold uppercase tracking-widest text-muted">{t.project.resourcesPill}</span>
+            <h2 className="display mt-5 text-4xl sm:text-5xl">{t.project.resources}</h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="text-lg leading-relaxed text-muted">{t.project.resourcesLede}</p>
+          </Reveal>
+        </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {playbooks.map((pb, i) => (
+            <Reveal key={pb.slug} delay={i * 0.08} className="h-full">
+              <PlaybookCard2 pb={pb} locale={locale} pagesLabel={t.playbooks.pages} />
+            </Reveal>
+          ))}
+          {post && <PostCard post={post} locale={locale} readLabel={t.notes.read} minutesLabel={t.blog.minutes} i={2} />}
+        </div>
+      </section>
+
       <CtaBand t={t.cta} secondaryHref={localePath(locale, "/playbooks/")} />
     </>
   );

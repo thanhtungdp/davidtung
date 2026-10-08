@@ -1,7 +1,7 @@
 import { getDictionary } from "@/i18n";
 import { localePath, type Locale } from "@/i18n/config";
 import { getEntries } from "@/lib/content";
-import { CaseGrid } from "@/components/sections/CaseGrid";
+import { CaseStories } from "@/components/sections/CaseStories";
 import { CtaBand } from "@/components/sections/CtaBand";
 import { PostCard } from "@/components/sections/EntryCards";
 import { PlaybookCard2 } from "@/components/sections/PlaybookLibrary";
@@ -9,7 +9,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Hero } from "@/components/sections/Hero";
 import { HermesBand } from "@/components/sections/HermesBand";
 import { Process } from "@/components/sections/Process";
-import { ServiceTabs } from "@/components/sections/ServiceTabs";
+import { SolutionOverview } from "@/components/sections/SolutionOverview";
 import { Stats } from "@/components/sections/Stats";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ButtonLink, SectionHeading } from "@/components/ui/Button";
@@ -24,9 +24,9 @@ export function HomeView({ locale }: { locale: Locale }) {
     <>
       <Hero t={t} casesHref="#cases" />
       <TrustBar label={t.trust.label} />
+      <SolutionOverview locale={locale} />
       <Stats t={t.stats} locale={locale} />
-      <CaseGrid t={t.cases} locale={locale} />
-      <ServiceTabs t={t.services} locale={locale} />
+      <CaseStories locale={locale} />
       <Process t={t.process} />
       <HermesBand t={t.hermes} href={p("/hermes/")} />
 

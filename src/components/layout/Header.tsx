@@ -36,7 +36,7 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
 
   const p = (path: string) => localePath(locale, path);
   const links = [
-    { href: p("/solutions/"), label: t.solutions },
+    { href: `${p("/")}#solutions`, label: t.solutions },
     { href: p("/playbooks/"), label: t.playbooks },
     { href: p("/blog/"), label: t.blog },
     { href: p("/hermes/"), label: t.hermes },

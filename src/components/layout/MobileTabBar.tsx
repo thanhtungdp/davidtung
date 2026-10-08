@@ -41,7 +41,7 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
   const home = p("/");
   const tabs = [
     { href: home, label: t.home, icon: House },
-    { href: p("/solutions/"), label: t.solutions, icon: LayoutGrid },
+    { href: `${p("/")}#solutions`, label: t.solutions, icon: LayoutGrid },
     { href: p("/playbooks/"), label: t.playbooks, icon: BookOpen },
     { href: p("/blog/"), label: t.blog, icon: Newspaper },
   ];

@@ -1,4 +1,6 @@
 import type { Locale } from "@/i18n/config";
+import type { CaseArtKey } from "@/components/mockups/CaseArt";
+import type { Tint } from "./solutions";
 
 export type ProjectVisual = "dashboard" | "agent" | "iot" | "education";
 
@@ -24,12 +26,17 @@ type ProjectCopy = {
 export type Project = {
   slug: string;
   visual: ProjectVisual;
+  tint: Tint;
+  /** One prototype per story step, in order. */
+  storyArt: CaseArtKey[];
   copy: Record<Locale, ProjectCopy>;
 };
 
 export const projects: Project[] = [
   {
     slug: "simplamo",
+    tint: "orange",
+    storyArt: ["goalTree", "execDashboard", "aiAssistant", "meetingAgenda", "integrations"],
     visual: "dashboard",
     copy: {
       vi: {
@@ -108,6 +115,8 @@ export const projects: Project[] = [
   },
   {
     slug: "sale-ai",
+    tint: "mint",
+    storyArt: ["photoIntake", "optionCompare", "quoteDoc", "orderSync", "adoption"],
     visual: "agent",
     copy: {
       vi: {
@@ -186,6 +195,8 @@ export const projects: Project[] = [
   },
   {
     slug: "ilotusland",
+    tint: "sky",
+    storyArt: ["sensorList", "dataStream", "alertConsole", "publicAqi"],
     visual: "iot",
     copy: {
       vi: {
@@ -262,6 +273,8 @@ export const projects: Project[] = [
   },
   {
     slug: "education",
+    tint: "lilac",
+    storyArt: ["lessonOutline", "quizFeedback", "viewsChart"],
     visual: "education",
     copy: {
       vi: {
