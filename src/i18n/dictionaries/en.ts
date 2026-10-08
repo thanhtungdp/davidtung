@@ -23,8 +23,8 @@ const en: Dictionary = {
   hero: {
     eyebrow: "Operator / Builder · Open to advisory",
     titleA: "Turn strategy into an",
-    titleHighlight: "operating system",
-    titleB: "that runs on AI.",
+    titleHighlight: "AI-run operating",
+    titleB: "system.",
     lede:
       "I help leadership teams turn data, sales workflows, and AI agents into a real growth rhythm. Built from SaaS, IoT, and AI products running at scale.",
     primary: "Discuss AI & operations",

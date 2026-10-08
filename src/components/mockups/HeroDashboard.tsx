@@ -36,7 +36,7 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
           <span className="ml-3 text-xs font-semibold text-muted">{t.app}</span>
           <span className="ml-auto rounded-full bg-sunken px-2.5 py-1 text-[11px] font-semibold text-muted">{t.period}</span>
         </div>
-        <div className="grid grid-cols-[52px_1fr] @3xl:grid-cols-[170px_1fr]">
+        <div className="grid grid-cols-[52px_minmax(0,1fr)] @3xl:grid-cols-[170px_minmax(0,1fr)]">
           <aside className="border-r border-line p-3">
             {[Target, TrendingUp, Bot, Radio].map((Icon, i) => (
               <div key={i} className={`mb-1.5 flex items-center gap-2 rounded-lg p-2 ${i === 0 ? "bg-brand-soft text-brand" : "text-subtle"}`}>
@@ -45,14 +45,14 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
               </div>
             ))}
           </aside>
-          <div className="grid gap-3 p-3 @md:p-4 @lg:grid-cols-[1.35fr_1fr]">
-            <div className="rounded-2xl border border-line p-4">
+          <div className="grid min-w-0 gap-3 p-3 @md:p-4 @lg:grid-cols-[1.35fr_1fr]">
+            <div className="min-w-0 rounded-2xl border border-line p-4">
               <p className="text-sm font-bold">{t.okrTitle}</p>
               <ul className="mt-4 grid gap-4">
                 {t.okrs.map((o, i) => (
-                  <li key={o.label}>
+                  <li key={o.label} className="min-w-0">
                     <div className="flex items-center justify-between gap-3 text-xs sm:text-[13px]">
-                      <span className="truncate text-muted">{o.label}</span>
+                      <span className="min-w-0 truncate text-muted">{o.label}</span>
                       <span className="font-bold tabular-nums">{o.value}%</span>
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-sunken">

@@ -22,7 +22,7 @@ const vi = {
     eyebrow: "Operator / Builder · Nhận trao đổi",
     titleA: "Biến chiến lược thành",
     titleHighlight: "hệ thống vận hành",
-    titleB: "chạy bằng AI.",
+    titleB: "AI.",
     lede:
       "Tôi giúp đội ngũ lãnh đạo biến dữ liệu, quy trình bán hàng và AI agents thành nhịp tăng trưởng thật. Từng xây SaaS, IoT và AI products dùng thật ở quy mô lớn.",
     primary: "Trao đổi về AI & vận hành",

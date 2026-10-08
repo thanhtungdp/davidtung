@@ -29,13 +29,18 @@ export function Hero({ t, casesHref }: { t: Dictionary; casesHref: string }) {
             </span>
           </Reveal>
 
-          <h1 className="display mx-auto mt-6 max-w-2xl text-[2.35rem] min-[400px]:text-[2.6rem] sm:text-5xl lg:mx-0 xl:text-[3.75rem]">
-            <SplitWords text={h.titleA} />{" "}
-            <span className="relative inline-block whitespace-nowrap">
-              <SplitWords text={h.titleHighlight} className="slant pr-[0.08em]" delay={0.2} />
-              <Swoosh variant="underline" className="absolute -bottom-[0.1em] left-0 h-[0.22em] w-full" delay={0.7} />
-            </span>{" "}
-            <SplitWords text={h.titleB} delay={0.35} />
+          {/* Exactly two lines from sm up: titleA / highlight + titleB. Phones wrap naturally. */}
+          <h1 className="display mx-auto mt-6 text-[2.1rem] min-[400px]:text-[2.4rem] sm:text-5xl lg:mx-0 lg:text-[2.6rem] xl:text-[3.3rem]">
+            <span className="block sm:whitespace-nowrap">
+              <SplitWords text={h.titleA} />
+            </span>
+            <span className="block sm:whitespace-nowrap">
+              <span className="relative sm:inline-block sm:whitespace-nowrap">
+                <SplitWords text={h.titleHighlight} className="slant pr-[0.08em]" delay={0.2} />
+                <Swoosh variant="underline" className="absolute -bottom-[0.1em] left-0 hidden h-[0.22em] w-full sm:block" delay={0.7} />
+              </span>{" "}
+              <SplitWords text={h.titleB} delay={0.35} />
+            </span>
           </h1>
 
           <Reveal delay={0.5}>
