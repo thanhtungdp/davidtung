@@ -5,6 +5,7 @@ import { projects } from "@/content/projects";
 import { MotionProvider } from "@/components/motion/MotionProvider";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { MobileTabBar } from "./MobileTabBar";
 import { themeScript } from "./ThemeToggle";
 import "@/app/globals.css";
 
@@ -32,11 +33,12 @@ export function SiteShell({ locale, children }: { locale: Locale; children: Reac
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="min-h-dvh overflow-x-clip">
+      <body className="min-h-dvh overflow-x-clip pb-[calc(env(safe-area-inset-bottom)+5.5rem)] lg:pb-0">
         <MotionProvider>
           <Header locale={locale} t={t.nav} projects={navProjects} />
           <main id="main">{children}</main>
           <Footer locale={locale} t={t} />
+          <MobileTabBar locale={locale} t={t.nav} projects={navProjects} />
         </MotionProvider>
       </body>
     </html>

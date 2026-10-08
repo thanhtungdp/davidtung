@@ -4,6 +4,10 @@ description: "Hermes Agent · OpenClaw · OpenAI Codex · Claude Code — where 
 date: "2026-08-07"
 series: "VOL.01"
 pages: 12
+topic: "Tools"
+audience: ["Founder", "CEO"]
+tint: "orange"
+cover: "grid"
 ---
 
 > Placeholder playbook — the final content will be updated.

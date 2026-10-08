@@ -4,6 +4,10 @@ description: "Claude, ChatGPT, GLM, Kimi, and DeepSeek — viewed by operating r
 date: "2026-08-08"
 series: "HANDBOOK 08/2026"
 pages: 13
+topic: "AI Agent"
+audience: ["CEO", "Ops teams"]
+tint: "sky"
+cover: "rings"
 ---
 
 > Placeholder playbook — the final content will be updated.

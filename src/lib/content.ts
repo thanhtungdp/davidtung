@@ -18,6 +18,11 @@ export type Entry = {
   /** Playbook-only label, e.g. "SỔ TAY VẬN HÀNH 2026". */
   series?: string;
   pages?: number;
+  topic?: string;
+  audience?: string[];
+  tint?: "orange" | "mint" | "lilac" | "butter" | "sky" | "rose";
+  cover?: "arcs" | "steps" | "rings" | "grid" | "waves" | "dots";
+  featured?: boolean;
   readingMinutes: number;
 };
 
@@ -48,6 +53,11 @@ function readFile(collection: Collection, locale: Locale, file: string) {
     tags: data.tags ?? [],
     series: data.series,
     pages: data.pages,
+    topic: data.topic,
+    audience: data.audience,
+    tint: data.tint,
+    cover: data.cover,
+    featured: data.featured,
     readingMinutes: Math.max(1, Math.round(words / 220)),
   };
   return { entry, content };

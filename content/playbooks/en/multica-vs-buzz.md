@@ -4,6 +4,10 @@ description: "Two open-source platforms for orchestrating parallel agents, disse
 date: "2026-08-07"
 series: "DOSSIER 01"
 pages: 12
+topic: "Tools"
+audience: ["Founder", "Ops teams"]
+tint: "rose"
+cover: "dots"
 ---
 
 > Placeholder playbook — the final content will be updated.

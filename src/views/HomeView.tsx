@@ -3,7 +3,9 @@ import { localePath, type Locale } from "@/i18n/config";
 import { getEntries } from "@/lib/content";
 import { CaseGrid } from "@/components/sections/CaseGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { PlaybookCard, PostCard } from "@/components/sections/EntryCards";
+import { PostCard } from "@/components/sections/EntryCards";
+import { PlaybookCard2 } from "@/components/sections/PlaybookLibrary";
+import { Reveal } from "@/components/motion/Reveal";
 import { Hero } from "@/components/sections/Hero";
 import { HermesBand } from "@/components/sections/HermesBand";
 import { Process } from "@/components/sections/Process";
@@ -37,7 +39,9 @@ export function HomeView({ locale }: { locale: Locale }) {
         </div>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {playbooks.map((pb, i) => (
-            <PlaybookCard key={pb.slug} pb={pb} locale={locale} readLabel={t.playbooks.read} pagesLabel={t.playbooks.pages} i={i} />
+            <Reveal key={pb.slug} delay={i * 0.08} className="h-full">
+              <PlaybookCard2 pb={pb} locale={locale} pagesLabel={t.playbooks.pages} />
+            </Reveal>
           ))}
         </div>
       </section>

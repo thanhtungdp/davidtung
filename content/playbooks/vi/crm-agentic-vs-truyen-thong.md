@@ -4,6 +4,10 @@ description: "Một loại coi con người là bộ nhập liệu. Loại kia c
 date: "2026-08-07"
 series: "VOL.01"
 pages: 13
+topic: "Sales & CRM"
+audience: ["Đội Sales", "CEO"]
+tint: "mint"
+cover: "waves"
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.

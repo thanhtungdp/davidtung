@@ -6,7 +6,9 @@ import { getEntries, type EntryWithBody } from "@/lib/content";
 import { Reveal } from "@/components/motion/Reveal";
 import { ScrollProgress } from "@/components/motion/ScrollProgress";
 import { CtaBand } from "@/components/sections/CtaBand";
-import { PlaybookCard, PostCard } from "@/components/sections/EntryCards";
+import { PostCard } from "@/components/sections/EntryCards";
+import { PlaybookCard2 } from "@/components/sections/PlaybookLibrary";
+import { BookCover } from "@/components/mockups/BookCover";
 
 /** Shared reading layout for blog posts and playbooks. */
 export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; locale: Locale; kind: "blog" | "playbooks" }) {
@@ -46,6 +48,13 @@ export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; loc
               <h1 className="display mt-6 text-4xl sm:text-5xl lg:text-6xl">{entry.title}</h1>
               <p className="mt-6 text-xl leading-relaxed text-muted">{entry.description}</p>
             </Reveal>
+            {kind === "playbooks" && (
+              <Reveal delay={0.25} y={40} className="mt-10 overflow-hidden rounded-[1.75rem]">
+                <div className="group">
+                  <BookCover entry={entry} size="lg" />
+                </div>
+              </Reveal>
+            )}
           </div>
         </header>
 
@@ -80,7 +89,9 @@ export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; loc
               kind === "blog" ? (
                 <PostCard key={e.slug} post={e} locale={locale} readLabel={t.notes.read} minutesLabel={t.blog.minutes} i={i} />
               ) : (
-                <PlaybookCard key={e.slug} pb={e} locale={locale} readLabel={t.playbooks.read} pagesLabel={t.playbooks.pages} i={i} />
+                <Reveal key={e.slug} delay={i * 0.08} className="h-full">
+                  <PlaybookCard2 pb={e} locale={locale} pagesLabel={t.playbooks.pages} />
+                </Reveal>
               ),
             )}
           </div>

@@ -4,6 +4,10 @@ description: "Sell early to learn from real money, profit through partner levera
 date: "2026-08-09"
 series: "OPERATIONS PLAYBOOK 2026"
 pages: 14
+topic: "Growth"
+audience: ["Founder", "CEO"]
+tint: "butter"
+cover: "steps"
 ---
 
 > Placeholder playbook — the final content will be updated.

@@ -4,6 +4,10 @@ description: "One treats people as data-entry clerks. The other treats the agent
 date: "2026-08-07"
 series: "VOL.01"
 pages: 13
+topic: "Sales & CRM"
+audience: ["Sales teams", "CEO"]
+tint: "mint"
+cover: "waves"
 ---
 
 > Placeholder playbook — the final content will be updated.

@@ -4,6 +4,11 @@ description: "How AI Agents are rebuilding organizations, creating four new role
 date: "2026-08-15"
 series: "DIGITAL TRANSFORMATION 2026"
 pages: 12
+topic: "AI Agent"
+audience: ["CEO", "Managers"]
+tint: "lilac"
+cover: "arcs"
+featured: true
 ---
 
 > Placeholder playbook — the final content will be updated.

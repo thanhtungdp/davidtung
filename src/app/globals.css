@@ -20,6 +20,16 @@
   --brand-ink: #ffffff;
   --invert-bg: #0a0a0a;
   --invert-fg: #fbf8f4;
+  /* Pastel tints for solution cards and playbook covers */
+  --tint-orange: #ffe4d1;
+  --tint-mint: #d4f3e6;
+  --tint-lilac: #e6defc;
+  --tint-butter: #fbefc4;
+  --tint-sky: #d3ecf8;
+  --tint-rose: #fbdbe3;
+  --glass-bg: rgb(255 255 255 / 0.72);
+  --glass-line: rgb(255 255 255 / 0.7);
+  --glass-shine: rgb(255 255 255 / 0.9);
   color-scheme: light;
 }
 
@@ -37,6 +47,15 @@
   --brand-ink: #0a0a0a;
   --invert-bg: #f6f2ee;
   --invert-fg: #0a0a0a;
+  --tint-orange: #3a1d0b;
+  --tint-mint: #0f2a21;
+  --tint-lilac: #221a3a;
+  --tint-butter: #2e2810;
+  --tint-sky: #0e2534;
+  --tint-rose: #351722;
+  --glass-bg: rgb(30 27 24 / 0.72);
+  --glass-line: rgb(255 255 255 / 0.14);
+  --glass-shine: rgb(255 255 255 / 0.22);
   color-scheme: dark;
 }
 
@@ -54,6 +73,12 @@
   --color-brand-ink: var(--brand-ink);
   --color-invert: var(--invert-bg);
   --color-invert-fg: var(--invert-fg);
+  --color-tint-orange: var(--tint-orange);
+  --color-tint-mint: var(--tint-mint);
+  --color-tint-lilac: var(--tint-lilac);
+  --color-tint-butter: var(--tint-butter);
+  --color-tint-sky: var(--tint-sky);
+  --color-tint-rose: var(--tint-rose);
 
   --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -134,6 +159,21 @@
   .grain {
     background-image: radial-gradient(color-mix(in oklab, var(--fg) 7%, transparent) 1px, transparent 1px);
     background-size: 22px 22px;
+  }
+
+  /* iOS 26-style "liquid glass" surface */
+  .glass {
+    background:
+      linear-gradient(180deg, color-mix(in oklab, var(--glass-shine) 35%, transparent), transparent 55%),
+      var(--glass-bg);
+    backdrop-filter: blur(26px) saturate(200%);
+    -webkit-backdrop-filter: blur(26px) saturate(200%);
+    border: 1px solid var(--glass-line);
+    box-shadow:
+      inset 0 1px 0 var(--glass-shine),
+      inset 0 -1px 1px rgb(255 255 255 / 0.08),
+      0 12px 40px -12px rgb(0 0 0 / 0.35),
+      0 2px 8px -2px rgb(0 0 0 / 0.12);
   }
 
   .mask-fade-x {

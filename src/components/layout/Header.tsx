@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
-import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -20,25 +20,23 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
   const pathname = usePathname() || "/";
   const [scrolled, setScrolled] = useState(false);
   const [mega, setMega] = useState(false);
-  const [mobile, setMobile] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const { scrollY } = useScroll();
   useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 12));
 
   useEffect(() => {
     setMega(false);
-    setMobile(false);
   }, [pathname]);
 
   useEffect(() => {
-    document.documentElement.style.overflow = mobile ? "hidden" : "";
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && (setMega(false), setMobile(false));
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMega(false);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [mobile]);
+  }, []);
 
   const p = (path: string) => localePath(locale, path);
   const links = [
+    { href: p("/solutions/"), label: t.solutions },
     { href: p("/playbooks/"), label: t.playbooks },
     { href: p("/blog/"), label: t.blog },
     { href: p("/hermes/"), label: t.hermes },
@@ -64,18 +62,18 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
           scrolled || mega ? "border-line bg-elev/80 shadow-[0_8px_40px_-12px_rgb(0_0_0/0.18)] backdrop-blur-xl" : "border-transparent bg-transparent"
         }`}
       >
-        <Link href={p("/")} className="mr-4 shrink-0" aria-label="David Tung — Home">
+        <Link href={p("/")} className="mr-2 shrink-0 xl:mr-4" aria-label="David Tung — Home">
           <Logo className="h-8 w-auto" />
         </Link>
 
-        <nav className="hidden flex-1 items-center gap-1 lg:flex" aria-label="Main">
+        <nav className="hidden flex-1 items-center gap-0.5 lg:flex xl:gap-1" aria-label="Main">
           <div className="relative" onMouseEnter={openMega} onMouseLeave={closeMega}>
             <button
               type="button"
               aria-expanded={mega}
               aria-controls="mega-cases"
               onClick={() => setMega((v) => !v)}
-              className={`flex h-10 items-center gap-1 rounded-full px-4 text-[15px] font-medium transition-colors hover:bg-sunken ${
+              className={`flex h-10 items-center gap-1 whitespace-nowrap rounded-full px-3 text-sm font-medium xl:px-4 xl:text-[15px] transition-colors hover:bg-sunken ${
                 isActive(p("/projects/")) ? "text-brand" : ""
               }`}
             >
@@ -87,7 +85,7 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
             <Link
               key={l.href}
               href={l.href}
-              className={`relative flex h-10 items-center rounded-full px-4 text-[15px] font-medium transition-colors hover:bg-sunken ${
+              className={`relative flex h-10 items-center whitespace-nowrap rounded-full px-3 text-sm font-medium xl:px-4 xl:text-[15px] transition-colors hover:bg-sunken ${
                 isActive(l.href) ? "text-brand" : ""
               }`}
             >
@@ -97,26 +95,16 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
         </nav>
 
         <div className="ml-auto flex items-center gap-1.5">
-          <div className="hidden sm:block">
-            <LanguageSwitch locale={locale} label={t.language} />
-          </div>
+          <LanguageSwitch locale={locale} label={t.language} />
           <ThemeToggle label={t.theme} />
           <a
             href={contact.mailto}
-            className="hidden h-11 items-center gap-1.5 rounded-full bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong md:inline-flex"
+            className="hidden h-11 items-center gap-1.5 whitespace-nowrap rounded-full bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-strong md:inline-flex"
           >
             {t.contact}
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </a>
-          <button
-            type="button"
-            className="grid size-11 place-items-center rounded-full bg-invert text-invert-fg lg:hidden"
-            aria-label={mobile ? t.close : t.menu}
-            aria-expanded={mobile}
-            onClick={() => setMobile((v) => !v)}
-          >
-            {mobile ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+
         </div>
       </div>
 
@@ -170,47 +158,6 @@ export function Header({ locale, t, projects }: { locale: Locale; t: Dictionary[
         )}
       </AnimatePresence>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobile && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.35, ease }}
-            className="absolute inset-x-3 top-[5.25rem] max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-[1.75rem] border border-line bg-elev p-4 shadow-2xl lg:hidden"
-          >
-            <p className="px-3 pt-2 text-xs font-semibold uppercase tracking-widest text-subtle">{t.cases}</p>
-            <ul className="mt-2 grid gap-1">
-              {projects.map((pr) => (
-                <li key={pr.slug}>
-                  <Link href={p(`/projects/${pr.slug}/`)} className="flex items-center justify-between rounded-2xl px-3 py-3 hover:bg-sunken">
-                    <span className="font-semibold">{pr.name}</span>
-                    <span className="text-xs font-bold text-brand">{pr.metric}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="my-3 h-px bg-line" />
-            <ul className="grid gap-1">
-              {links.map((l, i) => (
-                <motion.li key={l.href} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.05 * i }}>
-                  <Link href={l.href} className="block rounded-2xl px-3 py-3 text-2xl font-bold tracking-tight hover:bg-sunken">
-                    {l.label}
-                  </Link>
-                </motion.li>
-              ))}
-            </ul>
-            <div className="mt-4 flex items-center justify-between gap-3">
-              <LanguageSwitch locale={locale} label={t.language} />
-              <a href={contact.mailto} className="inline-flex h-11 flex-1 items-center justify-center gap-1.5 rounded-full bg-brand px-5 text-sm font-semibold text-white">
-                {t.contact}
-                <ArrowUpRight className="size-4" aria-hidden="true" />
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
   );
 }

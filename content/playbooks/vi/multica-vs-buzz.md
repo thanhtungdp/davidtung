@@ -4,6 +4,10 @@ description: "Hai nền tảng mã nguồn mở điều phối đội agent ch�
 date: "2026-08-07"
 series: "DOSSIER 01"
 pages: 12
+topic: "Công cụ"
+audience: ["Founder", "Đội vận hành"]
+tint: "rose"
+cover: "dots"
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.

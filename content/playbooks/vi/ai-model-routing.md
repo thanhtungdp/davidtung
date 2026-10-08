@@ -4,6 +4,10 @@ description: "Claude, ChatGPT, GLM, Kimi và DeepSeek — nhìn theo vai trò v�
 date: "2026-08-08"
 series: "CẨM NANG 08/2026"
 pages: 13
+topic: "AI Agent"
+audience: ["CEO", "Đội vận hành"]
+tint: "sky"
+cover: "rings"
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.

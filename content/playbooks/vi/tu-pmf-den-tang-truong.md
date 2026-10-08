@@ -4,6 +4,10 @@ description: "Bán sớm để học bằng tín hiệu tiền thật, tạo l�
 date: "2026-08-09"
 series: "SỔ TAY VẬN HÀNH 2026"
 pages: 14
+topic: "Tăng trưởng"
+audience: ["Founder", "CEO"]
+tint: "butter"
+cover: "steps"
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.

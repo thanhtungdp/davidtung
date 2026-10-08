@@ -4,6 +4,10 @@ description: "Hermes Agent · OpenClaw · OpenAI Codex · Claude Code — thị 
 date: "2026-08-07"
 series: "VOL.01"
 pages: 12
+topic: "Công cụ"
+audience: ["Founder", "CEO"]
+tint: "orange"
+cover: "grid"
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.

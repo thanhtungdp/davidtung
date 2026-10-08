@@ -4,6 +4,11 @@ description: "Cách AI Agent đang xây lại tổ chức, tạo ra bốn vai tr
 date: "2026-08-15"
 series: "SỔ TAY CHUYỂN ĐỔI SỐ 2026"
 pages: 12
+topic: "AI Agent"
+audience: ["CEO", "Quản lý"]
+tint: "lilac"
+cover: "arcs"
+featured: true
 ---
 
 > Playbook giả lập — nội dung chính thức sẽ được cập nhật.
