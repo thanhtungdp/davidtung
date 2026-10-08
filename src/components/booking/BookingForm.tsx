@@ -45,6 +45,12 @@ export function BookingForm({ locale }: { locale: Locale }) {
   const answersRef = useRef<Answers>({});
   answersRef.current = answers;
   const inputRef = useRef<HTMLInputElement | HTMLTextAreaElement | null>(null);
+  /** Hidden input that holds focus between questions so iOS keeps the keyboard open. */
+  const keeperRef = useRef<HTMLInputElement>(null);
+  const fieldRef = useCallback((el: HTMLInputElement | HTMLTextAreaElement | null) => {
+    inputRef.current = el;
+    el?.focus({ preventScroll: true });
+  }, []);
   const autoNext = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   // Restore / persist draft
@@ -82,6 +88,12 @@ export function BookingForm({ locale }: { locale: Locale }) {
     (to: number) => {
       clearTimeout(autoNext.current);
       inputRef.current = null;
+      // Must run synchronously inside the tap/keypress so mobile browsers allow it:
+      // park focus on the keeper when the next screen has a text field, otherwise
+      // drop focus so the keyboard closes for choice questions.
+      const nextQ = qs[to];
+      if (nextQ && !("options" in nextQ)) keeperRef.current?.focus({ preventScroll: true });
+      else (document.activeElement as HTMLElement | null)?.blur();
       setDir(to > step ? 1 : -1);
       setError(null);
       if (to === REVIEW) setReviewed(true);
@@ -89,7 +101,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
       // Long screens (review) leave the page scrolled; start each step at the top.
       if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: "instant" });
     },
-    [step, REVIEW],
+    [step, REVIEW, qs],
   );
 
   /** After answering, continue — or return to the review if editing from there. */
@@ -174,6 +186,8 @@ export function BookingForm({ locale }: { locale: Locale }) {
       const typing = target.tagName === "INPUT" || target.tagName === "TEXTAREA";
       if (e.key === "Enter" && !e.shiftKey && !e.isComposing) {
         if (target.tagName === "BUTTON" || target.tagName === "A") return;
+        // Phones have no Shift+Enter: let Return add a line in the long answer, use OK to continue.
+        if (target.tagName === "TEXTAREA" && window.matchMedia("(pointer: coarse)").matches) return;
         e.preventDefault();
         if (step === REVIEW) void submit();
         else if (step < REVIEW) next();
@@ -205,16 +219,24 @@ export function BookingForm({ locale }: { locale: Locale }) {
   );
 
   return (
-    <section className="relative isolate min-h-[100dvh] overflow-hidden">
+    <section className="relative isolate min-h-[100dvh] overflow-x-clip">
       <div className="grain absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,#000_10%,transparent_70%)]" aria-hidden="true" />
       <Swoosh className="pointer-events-none absolute -bottom-10 -left-20 -z-10 h-56 w-[70rem] max-w-none opacity-60" />
+
+      <input
+        ref={keeperRef}
+        aria-hidden="true"
+        tabIndex={-1}
+        className="pointer-events-none fixed left-0 top-0 h-px w-px opacity-0"
+        style={{ fontSize: 16 }}
+      />
 
       {/* Progress */}
       <div className="fixed inset-x-0 top-0 z-[60] h-1 bg-line/60" aria-hidden="true">
         <motion.div className="h-full origin-left bg-brand" animate={{ scaleX: step === DONE ? 1 : progress }} transition={{ type: "spring", stiffness: 120, damping: 24 }} />
       </div>
 
-      <div className="mx-auto grid min-h-[100dvh] w-full max-w-2xl items-center px-4 pb-28 pt-28 sm:px-6">
+      <div className="mx-auto grid min-h-[100dvh] w-full max-w-2xl items-start px-4 pb-16 pt-24 sm:items-center sm:px-6 sm:pb-28 sm:pt-28">
         <AnimatePresence mode="wait" custom={dir} initial={false}>
           <motion.div
             key={step}
@@ -256,16 +278,14 @@ export function BookingForm({ locale }: { locale: Locale }) {
                   {fill(q.title)}
                   {q.required && <span className="text-brand">&nbsp;*</span>}
                 </h2>
-                {(q.help || !q.required) && <p className="mt-2 text-muted">{q.help ?? c.optional}</p>}
+                {(q.help || !q.required) && <p className={`mt-2 text-muted ${q.type === "textarea" ? "pointer-coarse:hidden" : ""}`}>{q.help ?? c.optional}</p>}
 
                 {(q.type === "text" || q.type === "email" || q.type === "tel") && (
                   <input
-                    ref={(el) => {
-                      inputRef.current = el;
-                      el?.focus({ preventScroll: true });
-                    }}
+                    ref={fieldRef}
                     aria-labelledby={`q-${q.id}`}
                     type={q.type}
+                    enterKeyHint="next"
                     inputMode={q.type === "tel" ? "tel" : q.type === "email" ? "email" : undefined}
                     autoComplete={q.id === "name" ? "name" : q.type === "email" ? "email" : q.type === "tel" ? "tel" : "organization-title"}
                     value={asText(answers[q.id])}
@@ -277,10 +297,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
 
                 {q.type === "textarea" && (
                   <textarea
-                    ref={(el) => {
-                      inputRef.current = el;
-                      el?.focus({ preventScroll: true });
-                    }}
+                    ref={fieldRef}
                     aria-labelledby={`q-${q.id}`}
                     rows={3}
                     value={asText(answers[q.id])}
@@ -335,14 +352,19 @@ export function BookingForm({ locale }: { locale: Locale }) {
                   )}
                 </AnimatePresence>
 
-                {q.type !== "choice" && (
-                  <div className="mt-8 flex items-center gap-4">
+                <div
+                  className={`mt-8 flex items-center gap-3 ${
+                    q.type === "multi" ? "sticky bottom-0 -mx-4 bg-gradient-to-t from-bg via-bg to-transparent px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-6 sm:static sm:mx-0 sm:bg-none sm:p-0" : ""
+                  }`}
+                >
+                  {q.type !== "choice" && (
                     <button type="button" onClick={next} className="inline-flex h-12 items-center gap-2 rounded-xl bg-brand px-6 font-semibold text-white active:scale-95">
                       {c.ok} <Check className="size-4" aria-hidden="true" />
                     </button>
-                    <span className="hidden text-sm text-subtle sm:inline">{c.pressEnter}</span>
-                  </div>
-                )}
+                  )}
+                  <span className="hidden text-sm text-subtle sm:inline">{q.type !== "choice" && c.pressEnter}</span>
+                  <MobileBack onClick={prev} label={c.back} />
+                </div>
               </div>
             )}
 
@@ -370,7 +392,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                     <AlertTriangle className="size-4" aria-hidden="true" /> {c.error}
                   </p>
                 )}
-                <div className="mt-8 flex items-center gap-4">
+                <div className="mt-8 flex flex-wrap items-center gap-3">
                   <button
                     type="button"
                     disabled={status === "sending"}
@@ -381,6 +403,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                     <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                   </button>
                   <span className="hidden text-sm text-subtle sm:inline">{c.pressEnter}</span>
+                  <MobileBack onClick={prev} label={c.back} />
                 </div>
               </div>
             )}
@@ -413,7 +436,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
 
       {/* Up / down navigation, Typeform-style */}
       {step >= 0 && step <= REVIEW && (
-        <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-4 z-40 flex items-center gap-2 sm:right-6">
+        <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-6 z-40 hidden items-center gap-2 sm:flex">
           <span className="glass rounded-full px-3 py-2 text-xs font-bold tabular-nums">
             {Math.min(step + 1, qs.length)}/{qs.length}
           </span>
@@ -429,5 +452,14 @@ export function BookingForm({ locale }: { locale: Locale }) {
         </div>
       )}
     </section>
+  );
+}
+
+/** Phone-only "previous question" control, inline so it never covers answers. */
+function MobileBack({ onClick, label }: { onClick: () => void; label: string }) {
+  return (
+    <button type="button" onClick={onClick} className="ml-auto inline-flex h-12 items-center gap-1.5 rounded-xl border border-line px-4 text-sm font-semibold text-muted active:scale-95 sm:hidden">
+      <ChevronUp className="size-4" aria-hidden="true" /> {label}
+    </button>
   );
 }
