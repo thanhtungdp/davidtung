@@ -4,7 +4,7 @@ description: "Masscom Việt Nam triển khai Simplamo để liên kết mục t
 date: "2025-06-12"
 updated: "2025-06-12"
 image: "/blog/masscom-hien-thuc-hoa-tam-nhin-bang-he-thong-muc-tieu-linh-hoat-dong-bo-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 ## I. Từ Tầm nhìn lớn đến hệ thống thực thi rõ ràng

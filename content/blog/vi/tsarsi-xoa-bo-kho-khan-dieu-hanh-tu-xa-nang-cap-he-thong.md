@@ -4,7 +4,7 @@ description: "TSARSI – Total Service and Resource Solutions International, là
 date: "2024-07-08"
 updated: "2024-08-22"
 image: "/blog/tsarsi-xoa-bo-kho-khan-dieu-hanh-tu-xa-nang-cap-he-thong/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 TSARSI –  Total Service and Resource Solutions International, là công ty chuyên cung cấp nguồn nhân lực và dịch vụ chuyên dụng cho các công ty Mỹ và Úc đang kinh doanh trong các ngành Xây Dựng, Kỹ Thuật và Sản Xuất. TSARSI có trụ sở đặt tại bang Minnesota, Mỹ và văn phòng vận hành tại thành phố Hồ Chí Minh, Việt Nam.

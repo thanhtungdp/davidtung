@@ -27,7 +27,7 @@ function AgentHero({ vi }: { vi: boolean }) {
   const msgs = [
     { me: true, node: <span className="flex items-center gap-1.5"><ImageIcon className="size-3.5" /> {vi ? "Ảnh công trình · 2.4m × 3m" : "Site photo · 2.4m × 3m"}</span> },
     { me: false, node: vi ? "Đề xuất 3 phương án. Khuyên dùng: lá cách nhiệt + mô-tơ 300kg." : "3 options. Recommended: insulated slats + 300kg motor." },
-    { me: true, node: vi ? "Chốt phương án 2, giá đại lý C1" : "Go with option 2, C1 pricing" },
+    { me: true, node: vi ? "Chốt phương án 2, giá đại lý cấp 1" : "Go with option 2, C1 pricing" },
     { me: false, node: vi ? "Đã tạo báo giá #BG-204 và đơn SO-88213 ✓" : "Quote #BG-204 and order SO-88213 created ✓" },
   ];
   return (
@@ -56,7 +56,7 @@ function AgentHero({ vi }: { vi: boolean }) {
             {vi ? "14.2tr" : "$568"}
           </motion.p>
           <ul className="mt-3 grid gap-2 text-[11px]">
-            {(vi ? ["Catalogue & tồn kho", "Chính sách đại lý", "Bảng giá C1", "Đồng bộ SAP"] : ["Catalogue & stock", "Dealer policy", "C1 price list", "SAP sync"]).map((x, i) => (
+            {(vi ? ["Danh mục và tồn kho", "Chính sách đại lý", "Bảng giá cấp 1", "Đồng bộ SAP"] : ["Catalogue & stock", "Dealer policy", "C1 price list", "SAP sync"]).map((x, i) => (
               <motion.li key={x} className="flex items-center gap-2" initial={{ opacity: 0, x: 8 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1 + i * 0.25 }}>
                 <span className="grid size-4 place-items-center rounded-full bg-brand text-white">
                   <Check className="size-2.5" />
@@ -77,7 +77,7 @@ function IotHero({ vi }: { vi: boolean }) {
     [22, 28], [30, 44], [38, 36], [46, 58], [54, 30], [60, 70], [68, 48], [74, 22], [80, 62], [34, 74], [52, 46], [64, 38],
   ];
   return (
-    <Window title="iLotusLand · Environment On Cloud" right={<span className="text-[11px] font-bold text-emerald-600">● 1,024 online</span>}>
+    <Window title="iLotusLand · Environment On Cloud" right={<span className="text-[11px] font-bold text-emerald-600">● 1.024 {vi ? "trạm đang chạy" : "online"}</span>}>
       <div className="grid sm:grid-cols-[1.4fr_1fr]">
         <div className="relative h-64 bg-sunken/60 sm:h-72">
           <div className="grain absolute inset-0 opacity-60" />
@@ -122,7 +122,7 @@ function IotHero({ vi }: { vi: boolean }) {
 
 function EduHero({ vi }: { vi: boolean }) {
   return (
-    <Window title={vi ? "Bài giảng Pascal" : "Pascal lessons"} right={<span className="text-[11px] font-bold text-brand">1M+ views</span>}>
+    <Window title={vi ? "Bài giảng Pascal" : "Pascal lessons"} right={<span className="text-[11px] font-bold text-brand">{vi ? "1 triệu+ lượt xem" : "1M+ views"}</span>}>
       <div className="grid sm:grid-cols-[1.5fr_1fr]">
         <div className="relative grid h-60 place-items-center bg-neutral-950 sm:h-72">
           <pre className="absolute left-4 top-4 font-mono text-[11px] leading-relaxed text-emerald-300/80">

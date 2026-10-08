@@ -4,7 +4,7 @@ description: "StarGlobal3D là một trong những công ty tiên phong trong l�
 date: "2023-02-28"
 updated: "2023-11-03"
 image: "/blog/starglobal3d-don-gian-hoa-su-phuc-tap-trong-quy-trinh-van-hanh-voi-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 **[StarGlobal3D](https://starglobal3d.com)** là một trong những công ty tiên phong trong lĩnh vực giải pháp số hoá 3D, được cơ quan sáng chế và thương hiệu **Hoa Kỳ USPTO** cấp bằng sáng chế độc quyền (Patent) với sản phẩm “Web/App tương tác thông minh 3D/360”.

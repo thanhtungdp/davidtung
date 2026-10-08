@@ -16,3 +16,17 @@ See `README.md` for stack, routing and content locations.
   fit the viewport width.
 - Prototypes/illustrations show sample data; keep the real numbers in copy
   (`src/content/*`) only.
+
+## Vietnamese copy
+
+- Vietnamese UI copy is 100% Vietnamese. Keep English only for required terms
+  and names: AI, AI Agent, CEO, OKR, KPI, BSC, 4DX, OGSM, SaaS, IoT, CRM, SAP,
+  PDF, product/tool names (Simplamo, Sale AI, Hermes/Hermès, iLotusLand,
+  Telegram, Gmail, Zalo…) and the section names "Blog" and "Playbook".
+- Use: Dự án (not case study), bảng điều hành (dashboard), người phụ trách
+  (owner), mức sử dụng (adoption), kết quả (outcome), chủ doanh nghiệp nhỏ
+  (solo CEO), bản tin sáng (briefing), kinh doanh (sales), tiếp thị (marketing).
+- Write numbers the Vietnamese way (200.000, 1 triệu+), not 200K / 1M+.
+- Keep it short: one idea per sentence, cut anything that doesn't change meaning.
+- Blog and playbook bodies are the author's own writing — don't rewrite them.
+

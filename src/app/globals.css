@@ -170,29 +170,38 @@
     mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
   }
 
-  .prose-dt {
-    --tw-prose-body: var(--fg-muted);
-    --tw-prose-headings: var(--fg);
-    --tw-prose-links: var(--brand);
-    --tw-prose-bold: var(--fg);
-    --tw-prose-bullets: var(--brand);
-    --tw-prose-counters: var(--brand);
-    --tw-prose-quotes: var(--fg);
-    --tw-prose-quote-borders: var(--brand);
-    --tw-prose-hr: var(--line);
-    --tw-prose-th-borders: var(--line);
-    --tw-prose-td-borders: var(--line);
-    --tw-prose-code: var(--fg);
-  }
-  .prose-dt h2 { scroll-margin-top: 6rem; letter-spacing: -0.02em; }
-  .prose-dt table { display: block; overflow-x: auto; }
-  .prose-dt thead th { background: var(--invert-bg); color: var(--invert-fg); padding: 0.75rem 1rem; }
-  .prose-dt thead th:first-child { border-top-left-radius: 0.75rem; }
-  .prose-dt thead th:last-child { border-top-right-radius: 0.75rem; }
-  .prose-dt blockquote { font-style: normal; background: var(--brand-soft); border-radius: 0 1rem 1rem 0; padding: 0.75rem 1.25rem; }
-  .prose-dt blockquote p::before, .prose-dt blockquote p::after { content: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee { animation: none; }
 }
+
+/* Article typography. Kept outside @layer on purpose: the typography plugin lives in the
+   utilities layer, which would otherwise win over anything in components. */
+.prose.prose-dt {
+  --tw-prose-body: color-mix(in oklab, var(--fg) 82%, var(--bg));
+  --tw-prose-headings: var(--fg);
+  --tw-prose-lead: var(--fg-muted);
+  --tw-prose-links: var(--brand);
+  --tw-prose-bold: var(--fg);
+  --tw-prose-counters: var(--brand);
+  --tw-prose-bullets: var(--brand);
+  --tw-prose-hr: var(--line);
+  --tw-prose-quotes: var(--fg);
+  --tw-prose-quote-borders: var(--brand);
+  --tw-prose-captions: var(--fg-muted);
+  --tw-prose-kbd: var(--fg);
+  --tw-prose-code: var(--fg);
+  --tw-prose-pre-code: var(--invert-fg);
+  --tw-prose-pre-bg: var(--invert-bg);
+  --tw-prose-th-borders: var(--line);
+  --tw-prose-td-borders: var(--line);
+  color: var(--tw-prose-body);
+}
+.prose-dt h2 { scroll-margin-top: 6rem; letter-spacing: -0.02em; }
+.prose-dt table { display: block; overflow-x: auto; }
+.prose-dt thead th { background: var(--invert-bg); color: var(--invert-fg); padding: 0.75rem 1rem; }
+.prose-dt thead th:first-child { border-top-left-radius: 0.75rem; }
+.prose-dt thead th:last-child { border-top-right-radius: 0.75rem; }
+.prose-dt blockquote { font-style: normal; background: var(--brand-soft); border-radius: 0 1rem 1rem 0; padding: 0.75rem 1.25rem; }
+.prose-dt blockquote p::before, .prose-dt blockquote p::after { content: none; }

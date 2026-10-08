@@ -4,7 +4,7 @@ description: "BCA Group chính thức triển khai Simplamo để ứng dụng 4
 date: "2024-02-02"
 updated: "2025-06-06"
 image: "/blog/bca-group-ung-dung-4dx-quan-tri-thuc-thi-muc-tieu-tren-simplamo/BCA-Simplamo-cover.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 ## **1. Giới thiệu BCA Group**

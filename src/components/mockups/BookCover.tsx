@@ -71,21 +71,6 @@ function Pattern({ kind }: { kind: NonNullable<Entry["cover"]> }) {
 export function BookCover({ entry, size = "md" }: { entry: Entry; size?: "md" | "lg" }) {
   const tint = tintBg[entry.tint ?? "orange"];
   const lg = size === "lg";
-  if (entry.image) {
-    // Real cover artwork from the playbook PDF
-    return (
-      <div className={`relative grid place-items-center overflow-hidden ${tint} ${lg ? "aspect-[16/10]" : "aspect-[16/9]"}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={entry.image}
-          alt={entry.title}
-          loading="lazy"
-          decoding="async"
-          className={`h-[86%] w-auto max-w-[80%] object-contain drop-shadow-[0_18px_30px_rgb(0_0_0/0.35)] transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-1.5 group-hover:-rotate-1 ${lg ? "h-[88%]" : ""}`}
-        />
-      </div>
-    );
-  }
   return (
     <div className={`relative grid place-items-center overflow-hidden ${tint} ${lg ? "aspect-[16/10]" : "aspect-[16/9]"}`}>
       {lg && (

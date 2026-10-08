@@ -4,7 +4,7 @@ description: "Là một doanh nghiệp có tuổi đời trên 40 năm, Vnflour 
 date: "2023-01-13"
 updated: "2023-12-14"
 image: "/blog/doanh-nghiep-san-xuat-40-nam-tuoi-vnflour-doi-moi-cung-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *Là một doanh nghiệp có tuổi đời trên 40 năm, Vnflour đã đi qua nhiều giai đoạn phát triển của nền kinh tế. Với tôn chỉ kinh doanh tập trung vào chất lượng sản phẩm, Vnflour luôn dành được niềm tin và sự ủng hộ của khách hàng. Điều mà VNflour cần trong giai đoạn này đó chính là đổi mới phương thức vận hành, củng cố nội lực để đi xa hơn trong thời gian tới.*

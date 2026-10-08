@@ -4,7 +4,7 @@ description: "Bluebolt Software là công ty phần mềm hàng đầu Việt Na
 date: "2023-04-13"
 updated: "2023-11-03"
 image: "/blog/bluebolt-xay-dung-nen-tang-vung-chac-xoa-bo-ap-luc-dieu-hanh-cung-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *“Mình rất ấn tượng với Simplamo, các tính năng trên phần mềm giúp mình giải quyết 2 vấn đề mà mình rất quan tâm là “quản lí cuộc họp” theo format rõ ràng và các chỉ số đo lường theo kế hoạch. Hy vọng sau khi áp dụng Simplamo, cùng với với sự hỗ trợ của chuyên gia thì doanh số x3 trong thời gian tới.”* – Anh Lê Hoàng Đạt CEO Bluebolt Software chia sẻ

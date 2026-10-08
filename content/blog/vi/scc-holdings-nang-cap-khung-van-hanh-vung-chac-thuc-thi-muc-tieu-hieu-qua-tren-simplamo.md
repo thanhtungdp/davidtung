@@ -4,7 +4,7 @@ description: "SCC Holdings hoạt động trong lĩnh vực tư vấn, cung cấ
 date: "2023-04-26"
 updated: "2024-09-09"
 image: "/blog/scc-holdings-nang-cap-khung-van-hanh-vung-chac-thuc-thi-muc-tieu-hieu-qua-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *SCC Holdings hoạt động trong lĩnh vực tư vấn, cung cấp giải pháp phần mềm hợp pháp cho các công ty sản xuất. Bên cạnh đó SCC Holdings còn có nhiều năm kinh nghiệm trong việc tư vấn giải pháp CAD/CAM/CAE sao cho phù hợp nhất với nhu cầu sản xuất của các doanh nghiệp. Hiện nay, SCC Holdings tập trung vào 6 ngành công nghiệp trọng điểm đang phát triển một cách mạnh mẽ tại thị trường Việt Nam (Ô tô – Xe máy, Hàng không vũ trụ, Điện tử…)*

@@ -4,7 +4,7 @@ description: "Công ty Cổ Phần Hơi Kỹ Nghệ Que Hàn là doanh nghiệp 
 date: "2023-10-06"
 updated: "2024-08-09"
 image: "/blog/sovigaz-kham-pha-gia-tri-cot-loi-tang-suc-manh-noi-luc/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 [Công ty Cổ Phần Hơi Kỹ Nghệ Que Hàn](https://sovigaz.com.vn/) là doanh nghiệp nhà nước dẫn đầu về sản xuất các sản phẩm khí y tế, khí công nghiệp, que hàn điện và hóa chất. Trong suốt hơn 45 năm hoạt động, đến nay Sovigaz đã trở thành nhà sản xuất khí công nghiệp, que hàn điện và hóa chất hàng đầu Việt Nam.

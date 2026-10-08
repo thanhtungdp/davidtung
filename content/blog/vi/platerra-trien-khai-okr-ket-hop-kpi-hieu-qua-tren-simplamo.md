@@ -4,7 +4,7 @@ description: "Platerra triển khai Simplamo để kết hợp OKR, KPI hiệu q
 date: "2023-02-15"
 updated: "2023-12-15"
 image: "/blog/platerra-trien-khai-okr-ket-hop-kpi-hieu-qua-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Hệ thống Trung tâm Ngoại ngữ Hành Tinh được thành lập vào tháng 3 năm 2009 nhằm mang đến cho các em thiếu nhi, học sinh, sinh viên, người lao động các chương trình học ngoại ngữ tối ưu bằng các phương pháp tiên tiến nhất, trong điều kiện cơ sở vật chất đạt tiêu chuẩn, đáp ứng nhu cầu ngày càng cao của học viên, đảm bảo đạt kết quả cao nhất trong việc phát triển kỹ năng ngoại ngữ, dễ dàng vượt qua các kỳ thi lấy bằng cấp quốc tế như: Cambridge, TOEIC, TOEFL…

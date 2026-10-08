@@ -4,7 +4,7 @@ description: "AMAC áp dụng Simplamo để chuyển hóa mục tiêu 2024 thà
 date: "2024-01-31"
 updated: "2024-08-09"
 image: "/blog/amac-thuc-thi-muc-tieu-2024-voi-hanh-dong-cu-the-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 ## 1. Tổng quan về AMAC

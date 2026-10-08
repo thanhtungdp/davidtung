@@ -21,7 +21,7 @@ export const solutions: Solution[] = [
     href: "/projects/simplamo/",
     wide: true,
     copy: {
-      vi: { name: "Simplamo OS", tagline: "Biến chiến lược thành nhịp thực thi.", body: "Đồng bộ OGSM, BSC/KPI, OKRs từ công ty xuống từng đội nhóm — kèm dashboard, nhịp họp và AI." },
+      vi: { name: "Simplamo OS", tagline: "Biến chiến lược thành việc làm mỗi tuần.", body: "Đồng bộ OGSM, BSC/KPI, OKR từ công ty đến từng đội, kèm bảng điều hành, nhịp họp và AI." },
       en: { name: "Simplamo OS", tagline: "Turn strategy into an execution rhythm.", body: "Align OGSM, BSC/KPI, and OKRs from company to every team — with dashboards, meeting rhythm, and AI." },
     },
   },
@@ -31,7 +31,7 @@ export const solutions: Solution[] = [
     tint: "mint",
     href: "/projects/sale-ai/",
     copy: {
-      vi: { name: "Sale AI", tagline: "Báo giá dưới 60 giây.", body: "AI Agent cho 2.000 đại lý: từ ảnh công trình đến báo giá và đơn hàng đồng bộ SAP/CRM." },
+      vi: { name: "Sale AI", tagline: "Báo giá dưới 60 giây.", body: "AI Agent cho 2.000 đại lý: từ ảnh công trình ra báo giá và đơn hàng vào thẳng SAP/CRM." },
       en: { name: "Sale AI", tagline: "Quotes in under 60 seconds.", body: "An AI Agent for 2,000 dealers: from a site photo to a quote and an order synced to SAP/CRM." },
     },
   },
@@ -41,7 +41,7 @@ export const solutions: Solution[] = [
     tint: "lilac",
     href: "/hermes/",
     copy: {
-      vi: { name: "Hermes AI Team", tagline: "Đội AI tự chạy việc lặp lại.", body: "5 agent cho Sales, Marketing và Điều hành — ra lệnh một câu qua Telegram, agent tự làm." },
+      vi: { name: "Đội AI Hermes", tagline: "AI tự làm việc lặp lại.", body: "5 trợ lý AI cho kinh doanh, tiếp thị và điều hành. Ra lệnh một câu qua Telegram là xong." },
       en: { name: "Hermes AI Team", tagline: "An AI team that runs repetitive work.", body: "5 agents for Sales, Marketing, and Operations — one Telegram command and the agent does the rest." },
     },
   },
@@ -51,7 +51,7 @@ export const solutions: Solution[] = [
     tint: "sky",
     href: "/projects/ilotusland/",
     copy: {
-      vi: { name: "iLotusLand IoT", tagline: "1.000+ trạm quan trắc real-time.", body: "Kết nối thiết bị đo, datalogger và camera vào dashboard cảnh báo cho nhà máy và cơ quan nhà nước." },
+      vi: { name: "iLotusLand IoT", tagline: "Hơn 1.000 trạm quan trắc theo thời gian thực.", body: "Nối thiết bị đo, bộ ghi dữ liệu và camera về một bảng cảnh báo cho nhà máy và cơ quan nhà nước." },
       en: { name: "iLotusLand IoT", tagline: "1,000+ real-time monitoring stations.", body: "Connect sensors, dataloggers, and cameras to alerting dashboards for factories and public agencies." },
     },
   },
@@ -61,7 +61,7 @@ export const solutions: Solution[] = [
     tint: "butter",
     href: "/projects/simplamo/",
     copy: {
-      vi: { name: "Dashboard điều hành", tagline: "Một màn hình, đủ để quyết định.", body: "Gom KPI, OKR và tín hiệu vận hành vào một lớp nhìn nhanh để lãnh đạo hành động theo dữ liệu." },
+      vi: { name: "Bảng điều hành", tagline: "Một màn hình, đủ để quyết định.", body: "Gom KPI, OKR và số liệu vận hành vào một chỗ để lãnh đạo quyết định theo dữ liệu." },
       en: { name: "Executive dashboards", tagline: "One screen, enough to decide.", body: "Bring KPIs, OKRs, and operating signals into one glanceable layer so leaders act on data." },
     },
   },
@@ -71,7 +71,7 @@ export const solutions: Solution[] = [
     tint: "rose",
     href: "/playbooks/",
     copy: {
-      vi: { name: "Triển khai OKR · 4DX", tagline: "Nhịp tuần có owner và chỉ số.", body: "Đồng hành 4–12 tuần: mục tiêu, owner, nhịp họp và review — tới khi đội ngũ tự vận hành." },
+      vi: { name: "Triển khai OKR · 4DX", tagline: "Nhịp tuần có người phụ trách và chỉ số.", body: "Đồng hành 4–12 tuần: mục tiêu, người phụ trách, nhịp họp và đánh giá, đến khi đội ngũ tự chạy." },
       en: { name: "OKR · 4DX rollout", tagline: "A weekly rhythm with owners and metrics.", body: "4–12 weeks hands-on: goals, owners, meetings, and reviews — until the team runs it on its own." },
     },
   },
@@ -81,7 +81,7 @@ export const solutions: Solution[] = [
     tint: "orange",
     href: "/about/",
     copy: {
-      vi: { name: "Coaching lãnh đạo", tagline: "Ra quyết định nhanh hơn với AI.", body: "1:1 cho CEO và C-level, workshop cho đội sản phẩm: xây tư duy AI-operator thay vì AI-aware." },
+      vi: { name: "Huấn luyện lãnh đạo", tagline: "Quyết định nhanh hơn nhờ AI.", body: "Kèm riêng CEO và ban điều hành, hội thảo cho đội sản phẩm: từ biết dùng AI đến điều hành bằng AI." },
       en: { name: "Leadership coaching", tagline: "Decide faster with AI.", body: "1:1 for CEOs and C-level, workshops for product teams: build an AI-operator mindset, not just AI-aware." },
     },
   },
@@ -91,7 +91,7 @@ export const solutions: Solution[] = [
     tint: "mint",
     href: "/projects/education/",
     copy: {
-      vi: { name: "Đào tạo", tagline: "Bài học như một sản phẩm.", body: "Biến chủ đề khô thành trải nghiệm học cuốn hút — đã chạm hơn 1 triệu lượt xem." },
+      vi: { name: "Đào tạo", tagline: "Bài học được làm như sản phẩm.", body: "Biến chủ đề khô thành bài học cuốn hút, hơn 1 triệu lượt xem." },
       en: { name: "Education", tagline: "Lessons designed like products.", body: "Turn dry subjects into engaging learning — reaching more than one million views." },
     },
   },
@@ -116,17 +116,17 @@ export const solutionsPage: Record<
   }
 > = {
   vi: {
-    title: "Nền tảng giải pháp David Tung",
-    lede: "Từ chiến lược, dữ liệu đến AI agents — các hệ thống tôi đã xây và triển khai để đội ngũ tăng trưởng vận hành nhanh hơn.",
+    title: "Giải pháp của David Tung",
+    lede: "Các hệ thống tôi đã xây và triển khai, từ chiến lược, dữ liệu đến AI Agent.",
     primary: "Trao đổi về giải pháp",
-    secondary: "Xem case study",
-    overview: "Tổng quan giải pháp",
-    overviewTitle: "Đội ngũ hiệu suất cao được xây ở đây",
-    overviewLede: "Mỗi giải pháp giải một điểm ma sát cụ thể giữa chiến lược và vận hành hằng ngày — và chúng được thiết kế để chạy cùng nhau.",
+    secondary: "Xem dự án",
+    overview: "Giải pháp",
+    overviewTitle: "Nơi đội ngũ giỏi được xây nên",
+    overviewLede: "Mỗi giải pháp gỡ một điểm nghẽn giữa chiến lược và vận hành, và chúng chạy cùng nhau.",
     tour: "Đặt lịch trao đổi 30 phút",
-    storiesPill: "Câu chuyện triển khai",
-    storiesTitle: "Đã chạy ở quy mô thật",
-    story: "Đọc case study",
+    storiesPill: "Dự án",
+    storiesTitle: "Đang chạy ở quy mô thật",
+    story: "Xem dự án",
     prev: "Trước",
     next: "Tiếp",
   },

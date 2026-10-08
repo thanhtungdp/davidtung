@@ -4,7 +4,7 @@ description: "Lê Vỹ được thành lập vào năm 2007, hoạt động tron
 date: "2023-01-20"
 updated: "2023-12-14"
 image: "/blog/le-vy-dieu-hanh-mang-luoi-cong-ty-da-nhiem-cung-voi-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *Lê Vỹ được thành lập vào năm 2007 hoạt động trong lĩnh vực SX-TM-DV Vật chịu lửa, vật liệu bảo ôn, cách nhiệt, dịch vụ kỹ thuật, thi công, lắp đặt lò nung, cung cấp các sản phẩm cho ngành Thép, Đúc, Đúc và Đá quý, đá phong thủy. Hiện tại, Lê Vỹ có 6 công ty con hoạt động trong hệ sinh thái.*

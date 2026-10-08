@@ -39,7 +39,7 @@ export function HermesSalesArt({ vi }: P) {
         <p className="font-semibold">{vi ? "Báo giá gói Pro — Hợp đồng 12 tháng (#BG-204)" : "Pro plan quote — 12-month contract (#BG-204)"}</p>
       </div>
       <Pop delay={0.15} className="mt-3 rounded-xl bg-sunken p-3 text-[11px] leading-relaxed text-muted">
-        {vi ? "Chào anh Minh, em gửi báo giá gói Pro theo trao đổi sáng nay. Tổng 32.4tr/năm, đã gồm onboarding…" : "Hi Minh, attached is the Pro plan quote we discussed this morning. Total $1,296/yr including onboarding…"}
+        {vi ? "Chào anh Minh, em gửi báo giá gói Pro theo trao đổi sáng nay. Tổng 32,4tr/năm, đã gồm hướng dẫn sử dụng…" : "Hi Minh, attached is the Pro plan quote we discussed this morning. Total $1,296/yr including onboarding…"}
       </Pop>
       <Pop delay={0.35} className="mt-3 flex items-center gap-2 rounded-xl border border-line p-2.5 text-[11px]">
         <FileText className="size-4 text-brand" aria-hidden="true" />
@@ -47,7 +47,7 @@ export function HermesSalesArt({ vi }: P) {
         <span className="text-subtle">128 KB</span>
       </Pop>
       <Pop delay={0.55} className="mt-2 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
-        <Sheet className="size-3.5" aria-hidden="true" /> {vi ? "Đã cập nhật CRM · trạng thái “Đã báo giá”" : "CRM updated · status “Quoted”"}
+        <Sheet className="size-3.5" aria-hidden="true" /> {vi ? "Đã cập nhật CRM: “Đã báo giá”" : "CRM updated · status “Quoted”"}
       </Pop>
     </Panel>
   );
@@ -58,7 +58,7 @@ export function HermesFunnelArt({ vi }: P) {
     ? [
         ["Anh Sơn · Vela", "Nóng", "48.5tr", "rose"],
         ["Anh Minh · ACME", "Đã báo giá", "32.4tr", "brand"],
-        ["Chị Hà · Bloom", "Follow-up 3d", "12.0tr", "amber"],
+        ["Chị Hà · Bloom", "Nhắc sau 3 ngày", "12.0tr", "amber"],
         ["Chị Lan · Koi", "Mới", "—", "subtle"],
       ]
     : [
@@ -70,7 +70,7 @@ export function HermesFunnelArt({ vi }: P) {
   const color: Record<string, string> = { rose: "bg-rose-500/15 text-rose-600", brand: "bg-tint-orange text-brand", amber: "bg-amber-500/15 text-amber-700 dark:text-amber-400", subtle: "bg-sunken text-subtle" };
   return (
     <Panel className="h-full">
-      <Head icon={Sheet} title={vi ? "Google Sheets · Pipeline" : "Google Sheets · Pipeline"} />
+      <Head icon={Sheet} title={vi ? "Google Sheets · Khách tiềm năng" : "Google Sheets · Pipeline"} />
       <table className="mt-2 w-full text-[11px]">
         <tbody>
           {rows.map(([n, s, v, c], i) => (
@@ -112,7 +112,7 @@ export function HermesVoiceArt({ vi }: P) {
         </span>
       </Pop>
       <Pop delay={0.85} className="mt-3 flex gap-2">
-        <span className="flex-1 rounded-lg bg-invert py-2 text-center text-[11px] font-bold text-invert-fg">{vi ? "Duyệt & lên lịch" : "Approve & schedule"}</span>
+        <span className="flex-1 rounded-lg bg-invert py-2 text-center text-[11px] font-bold text-invert-fg">{vi ? "Duyệt và lên lịch" : "Approve & schedule"}</span>
         <span className="rounded-lg border border-line px-3 py-2 text-[11px] font-bold">{vi ? "Sửa" : "Edit"}</span>
       </Pop>
     </Panel>
@@ -136,7 +136,7 @@ export function HermesVisualArt({ vi }: P) {
         <motion.div className="h-full rounded-full bg-brand" initial={{ width: 0 }} whileInView={{ width: "100%" }} viewport={view} transition={{ delay: 0.5, duration: 1.6, ease }} />
       </div>
       <p className="mt-2 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600">
-        <Check className="size-3.5" aria-hidden="true" /> {vi ? "Render xong · đã gửi Telegram để duyệt" : "Rendered · sent to Telegram for approval"}
+        <Check className="size-3.5" aria-hidden="true" /> {vi ? "Dựng xong · đã gửi Telegram chờ duyệt" : "Rendered · sent to Telegram for approval"}
       </p>
     </Panel>
   );
@@ -148,7 +148,7 @@ export function HermesDailyArt({ vi }: P) {
     : ["3 hot leads need a reply before noon.", "2 overdue quotes — Funnel sent reminders.", "7pm Facebook post awaiting approval.", "Weekly revenue: +18% vs last week."];
   return (
     <Panel className="h-full">
-      <Head icon={Sun} title={vi ? "Briefing sáng · 7:00" : "Morning briefing · 7:00"} right={<span className="flex items-center gap-1 text-[10px] font-bold text-emerald-600"><span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />LIVE</span>} />
+      <Head icon={Sun} title={vi ? "Bản tin sáng · 7:00" : "Morning briefing · 7:00"} right={<span className="flex items-center gap-1 text-[10px] font-bold text-emerald-600"><span className="size-1.5 animate-pulse rounded-full bg-emerald-500" />LIVE</span>} />
       <ul className="mt-3 grid gap-2">
         {items.map((it, i) => (
           <Pop key={it} delay={0.1 + i * 0.12}>
@@ -188,7 +188,7 @@ export function HermesHero({ vi }: P) {
         </span>
         <div>
           <p className="text-sm font-bold">Hermes Core</p>
-          <p className="text-[11px] text-emerald-600">● {vi ? "5 agent đang hoạt động" : "5 agents active"}</p>
+          <p className="text-[11px] text-emerald-600">● {vi ? "5 trợ lý AI đang chạy" : "5 agents active"}</p>
         </div>
         <MessageCircle className="ml-auto size-4 text-subtle" aria-hidden="true" />
       </div>

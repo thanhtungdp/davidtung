@@ -4,7 +4,7 @@ description: "Việt An Group xây dựng khung vận hành chuẩn cho hệ th�
 date: "2023-01-06"
 updated: "2023-11-03"
 image: "/blog/simplamo-xay-dung-khung-van-hanh-tang-truong-doanh-thu-cho-viet-an-group-2/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Là một doanh nghiệp dẫn đầu ngành trong suốt nhiều năm liền, Việt An Group không ngừng phát triển mạnh mẽ tạo nên tên tuổi và dấu ấn sâu đậm trong thị trường. Ở một vị thế lớn không có nghĩa là không có khó khăn, bài toán của Việt An Group còn nan giải hơn so với rất nhiều doanh nghiệp khác vì hệ sinh thái có đến 12 công ty con và hơn 250 nhân sự hoạt động khắp 3 miền tổ quốc.

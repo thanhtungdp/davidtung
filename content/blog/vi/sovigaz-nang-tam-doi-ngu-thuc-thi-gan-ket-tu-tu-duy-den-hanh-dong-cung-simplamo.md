@@ -3,7 +3,7 @@ title: "Sovigaz nâng tầm đội ngũ thực thi – Gắn kết từ tư duy 
 description: "Công ty Cổ phần Hơi kỹ nghệ Que Hàn là doanh nghiệp nhà nước dẫn đầu về sản xuất các sản phẩm khí y tế, khí công nghiệp, que hàn điện và hóa chất tại Việt Nam."
 date: "2025-06-16"
 image: "/blog/sovigaz-nang-tam-doi-ngu-thuc-thi-gan-ket-tu-tu-duy-den-hanh-dong-cung-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 [Công ty Cổ phần Hơi kỹ nghệ Que Hàn](https://sovigaz.com.vn/) là doanh nghiệp nhà nước dẫn đầu về sản xuất các sản phẩm khí y tế, khí công nghiệp, khí y tế, que hàn điện và hóa chất tại Việt Nam.

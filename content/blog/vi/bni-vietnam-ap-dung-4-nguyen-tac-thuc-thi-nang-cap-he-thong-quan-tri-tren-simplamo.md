@@ -4,7 +4,7 @@ description: "BNI Vietnam áp dụng Simplamo để triển khai 4 Nguyên tắc
 date: "2024-02-02"
 updated: "2025-06-06"
 image: "/blog/bni-vietnam-ap-dung-4-nguyen-tac-thuc-thi-nang-cap-he-thong-quan-tri-tren-simplamo/BNI-Simplamo-cover.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 BNI là tổ chức kết nối thương mại lớn nhất và thành công nhất trên thế giới được sáng lập vào năm 1985. BNI Việt Nam chính thức được thành lập vào năm 2010, đến nay đã có hơn 9,000 thành viên với 214 chapter tại 32 tỉnh thành lớn trên cả nước.

@@ -4,7 +4,7 @@ description: "Soha Travel chia sẻ cách Simplamo giúp đội ngũ thấu hi�
 date: "2023-04-05"
 updated: "2023-11-03"
 image: "/blog/soha-travel-quan-tri-de-hieu-voi-simplamo-thay-ngan-loi-noi-chi-bang-mot-man-hinh/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 “Em muốn các bạn ngồi đây hiểu những gì em đang suy nghĩ, phải lao động mới có thành quả, có tâm với nghề, lên các vị trí càng cao, trách nhiệm sẽ càng lớn. Với các em, Chị hiểu hết những nỗi lòng của nhân viên vì đã từng trải qua những gì nổi chìm trong cách tư duy của từng vị trí. Chị muốn các em hiểu KPI nhẹ nhàng, không bị áp lực, cái gì cũng vậy khi làm các bạn phải thật thoải mái để tự tin cảm nhận đây thực sự là cái sinh ra dành cho mình, đặt tâm huyết của mình vô nó, nỗ lực cho những gì thuộc về mình, thì sẽ thành công.

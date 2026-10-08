@@ -4,7 +4,7 @@ description: "Thành lập từ năm 2013, Bánh mì Má Hải – thương hi�
 date: "2023-10-11"
 updated: "2025-06-13"
 image: "/blog/banh-mi-ma-hai-chuan-bi-buoc-dem-tang-truong-hanh-trang-vuon-ra-bien-lon-cung-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Thành lập từ năm 2013, **Bánh mì Má Hải** – thương hiệu thuộc Công ty CP Tập đoàn MHG – hiện là chuỗi bánh mì chả cá hàng đầu Việt Nam với hệ thống hơn 500 kiosk trên 37 tỉnh thành, 4 cửa hàng và đội ngũ hơn 50 nhân sự cốt cán. MHG vận hành theo 2 mô hình: chuỗi cửa hàng và hệ thống nhượng quyền xe bánh mì lưu động.

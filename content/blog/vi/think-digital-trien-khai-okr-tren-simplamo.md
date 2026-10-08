@@ -4,7 +4,7 @@ description: "Think Digital áp dụng Simplamo để đội ngũ nhìn thấy b
 date: "2025-05-29"
 updated: "2025-06-12"
 image: "/blog/think-digital-trien-khai-okr-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Think Digital là một công ty tiên phong trong lĩnh vực Digital Marketing tại Việt Nam, được thành lập vào năm 2015 bởi anh Hồ Đông Thụ – một chuyên gia giàu kinh nghiệm trong lĩnh vực Marketing và Quản trị doanh nghiệp.

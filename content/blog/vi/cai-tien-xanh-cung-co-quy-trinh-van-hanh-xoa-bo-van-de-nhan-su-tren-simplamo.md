@@ -4,7 +4,7 @@ description: "Công ty TNHH Cải Tiến Xanh ứng dụng Simplamo để xây d
 date: "2023-02-21"
 updated: "2023-11-03"
 image: "/blog/cai-tien-xanh-cung-co-quy-trinh-van-hanh-xoa-bo-van-de-nhan-su-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Công ty TNHH CẢI TIẾN XANH bắt đầu hoạt động vào ngày 21/11/2008, cung cấp giải pháp công nghệ bảo vệ môi trường. Cải Tiến Xanh Luôn không ngừng hoàn thiện tổ chức, xây dựng đội ngũ nhân viên với chuyên môn chất lượng cao, tiên phong trong việc nghiên cứu công nghệ dịch vụ môi trường mới với những tiêu chuẩn bền vững.

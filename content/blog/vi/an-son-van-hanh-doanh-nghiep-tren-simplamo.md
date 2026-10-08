@@ -4,7 +4,7 @@ description: "Anh Đinh Hoàng Lâm – CEO An Sơn chia sẻ cách Simplamo gi�
 date: "2023-08-17"
 updated: "2023-12-15"
 image: "/blog/an-son-van-hanh-doanh-nghiep-tren-simplamo/Hinh-anh-casestudy-90.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Anh Đinh Hoàng Lâm – CEO An Sơn chia sẻ “Tổ chức cuộc họp hàng tuần là phần mình mong chờ nhất, mình hiểu được quá trình khai thác nguyên nhân của một vấn đề, và việc hệ thống lại mọi thứ theo nguyên tắc 3 bước trên Simplamo giúp mình và đội ngũ tiết kiệm thời gian và đưa ra phương án giải quyết nhanh hơn”

@@ -3,7 +3,7 @@ title: "BV Răng Hàm Mặt SG – Simplamo là mảnh ghép hoàn hảo nâng c
 description: "BV Răng Hàm Mặt Sài Gòn ứng dụng Simplamo để lấp đầy các khoảng trống quản trị, nâng cấp OKR, hoàn thiện hệ thống vận hành và gia tăng hiệu suất làm việc."
 date: "2023-02-14"
 image: "/blog/simplamo-manh-ghep-hoan-hao-nang-cap-okr-cho-bv-rang-ham-mat-gia-tang-hieu-suat-cong-viec/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *Áp dụng OKR vào vận hành doanh nghiệp từ năm 2020, bệnh viện Răng Hàm Mặt Sài Gòn (BV RHM) đã xây dựng được hệ thống quản trị mục tiêu OKR cho đội ngũ. Tuy nhiên chỉ với các mục tiêu OKR là chưa đủ – Ban lãnh đạo BV RHM nhận định, **vẫn còn nhiều khoảng trống trong quản trị cần lấp đầy**, và điều này đã tạo nên “mối lương duyên” tốt đẹp với Simplamo – Phần mềm quản trị doanh nghiệp toàn diện tư duy hiện đại chuẩn Hoa Kỳ.*

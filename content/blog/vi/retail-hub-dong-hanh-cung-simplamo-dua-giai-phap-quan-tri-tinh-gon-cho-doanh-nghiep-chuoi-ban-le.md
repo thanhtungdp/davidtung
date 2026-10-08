@@ -4,7 +4,7 @@ description: "RETAILHUB là cổng kết nối bán lẻ, nơi chia sẻ kiến 
 date: "2023-06-14"
 updated: "2023-11-04"
 image: "/blog/retail-hub-dong-hanh-cung-simplamo-dua-giai-phap-quan-tri-tinh-gon-cho-doanh-nghiep-chuoi-ban-le/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 RETAILHUB là cổng kết nối bán lẻ, nơi chia sẻ kiến thức, kinh nghiệm và đồng hành cùng doanh nghiệp trên hành trình phát triển ngành bán lẻ. Anh Phùng Thanh Ngọc – Founder Cổng Kết Nối Bán Lẻ RETAILHUB, đào tạo và tư vấn hơn 600 mô hình chuỗi cùng với 16 năm kinh nghiệm trong mảng Marketing.

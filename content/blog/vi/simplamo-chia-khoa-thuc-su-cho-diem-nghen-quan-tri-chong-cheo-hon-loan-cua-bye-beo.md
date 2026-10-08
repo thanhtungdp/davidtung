@@ -3,7 +3,7 @@ title: "Start-up Shark Tank Bye Béo – Tìm được Chìa khóa thực sự c
 description: "Bye Béo ứng dụng Simplamo để tháo gỡ điểm nghẽn quản trị chồng chéo, cơ cấu lại trách nhiệm, thiết lập mục tiêu quý và đo lường KPI đơn giản, rõ ràng."
 date: "2023-02-14"
 image: "/blog/simplamo-chia-khoa-thuc-su-cho-diem-nghen-quan-tri-chong-cheo-hon-loan-cua-bye-beo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 “Mình làm quản trị công ty được 7,8 năm rồi, mô hình nào mình cũng làm qua rồi, mình đã áp dụng **OKR, rồi áp dụng KPI, phần mềm từ Base, 1Office tới Larksuite** tới tất cả mọi thứ thì nó quá là khó, không áp dụng được vì độ **phức tạp** trong thao tác và nhỏ lẻ. **Simplamo** đưa ra cho mình một cái nhìn **tổng thể, toàn diện, cụ thể và rất đơn giản**, đúng những gì mình tìm kiếm” – Chia sẻ đầy chân thành của CEO Bye Béo Trần Ân Thành Long.

@@ -4,7 +4,7 @@ description: "Công ty cổ phần Thương Mại và Sản Xuất Bao Bì Ánh 
 date: "2023-09-14"
 updated: "2024-04-01"
 image: "/blog/bao-bi-anh-sang-bam-duoi-muc-tieu-hoan-thien-he-thong-thuc-thi-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Công ty cổ phần Thương Mại và Sản Xuất [Bao Bì Ánh Sáng](https://baobianhsang.vn) là một trong những doanh nghiệp chuyên sâu về sản xuất bao bì PP đầu tiên tại thị trường Việt Nam, với phương châm “Đơn giản, hiệu quả, nhanh chóng và toàn diện” để mang lại giá trị cao nhất cho khách hàng.

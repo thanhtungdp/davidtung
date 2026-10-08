@@ -4,7 +4,7 @@ description: "SolarBK áp dụng Simplamo để hoàn thiện hệ thống quả
 date: "2024-02-01"
 updated: "2024-08-09"
 image: "/blog/solarbk-trien-khai-simplamo-hoan-thien-he-thong-kpi-okrs/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 ## **1. Tổng quan về SolarBK**

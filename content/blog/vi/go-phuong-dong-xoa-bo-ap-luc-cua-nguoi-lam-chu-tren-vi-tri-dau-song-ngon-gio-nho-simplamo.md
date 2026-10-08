@@ -4,7 +4,7 @@ description: "Câu chuyện Gỗ Phương Đông ứng dụng Simplamo để tru
 date: "2023-02-28"
 updated: "2023-12-06"
 image: "/blog/go-phuong-dong-xoa-bo-ap-luc-cua-nguoi-lam-chu-tren-vi-tri-dau-song-ngon-gio-nho-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Được thành lập vào năm 2007, trong hơn 16 năm hoạt động trên thị trường Gỗ Việt Nam, công ty TNHH [Gỗ Phương Đông](https://gophuongdong.com) là một trong những đơn vị nhập khẩu – phân phối gỗ nguyên liệu hàng đầu hiện nay, sản phẩm được nhập từ nhiều hãng sản xuất gỗ uy tín trên thế giới như: Mỹ, châu Âu, châu Phi, Brazil, New Zealand, Úc, Chile,…

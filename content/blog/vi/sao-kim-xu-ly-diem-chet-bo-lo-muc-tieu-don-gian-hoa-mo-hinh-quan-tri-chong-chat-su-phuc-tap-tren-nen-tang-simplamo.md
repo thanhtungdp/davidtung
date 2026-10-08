@@ -4,7 +4,7 @@ description: "Sao Kim Branding là công ty chuyên sâu về hoạch định ch
 date: "2023-04-26"
 updated: "2023-11-03"
 image: "/blog/sao-kim-xu-ly-diem-chet-bo-lo-muc-tieu-don-gian-hoa-mo-hinh-quan-tri-chong-chat-su-phuc-tap-tren-nen-tang-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Sao Kim Branding là công ty chuyên sâu về hoạch định chiến lược, thiết kế và truyền thông thương hiệu. Doanh nghiệp cung cấp giải pháp toàn diện giúp khách hàng nâng cao năng lực cạnh tranh thông qua việc xây dựng thương hiệu mạnh. Hiện tại, Sao Kim đã được hơn 10,000 khách hàng tin tưởng, hơn 15 năm kinh nghiệm hoạt động trong lĩnh vực, cùng với hơn 100 nhân sự tài năng, đã và đang mang đến cho khách hàng chất lượng dịch vụ tốt nhất.

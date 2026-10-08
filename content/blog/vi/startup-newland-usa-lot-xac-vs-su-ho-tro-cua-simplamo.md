@@ -4,7 +4,7 @@ description: "Newland USA là công ty chuyên cung cấp giải pháp định c
 date: "2024-08-07"
 updated: "2025-05-20"
 image: "/blog/startup-newland-usa-lot-xac-vs-su-ho-tro-cua-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 **Newland USA** là công ty chuyên cung cấp giải pháp định cư Mỹ an toàn, chuyên nghiệp với thời gian ngắn nhất. Newland USA đồng thời là đơn vị tiên phong thực hiện chương trình EB-3 Skilled Workers tại Việt Nam cùng các dự án đầu tư EB-5 uy tín. Với đội ngũ chuyên gia hơn 13 năm kinh nghiệm trong lĩnh vực di trú, Newland USA đã thực hiện thành công hàng trăm hồ sơ định cư thông qua các diện đầu tư, lao động, du học, kinh doanh,…

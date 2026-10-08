@@ -93,7 +93,7 @@ function GoalTree({ vi }: P) {
       ];
   return (
     <Panel className="h-full">
-      <Head icon={Target} title={vi ? "Cây mục tiêu · Q4" : "Goal tree · Q4"} right={<span className="rounded-full bg-tint-orange px-2 py-0.5 text-[10px] font-bold text-brand">OKR</span>} />
+      <Head icon={Target} title={vi ? "Cây mục tiêu · Quý 4" : "Goal tree · Q4"} right={<span className="rounded-full bg-tint-orange px-2 py-0.5 text-[10px] font-bold text-brand">OKR</span>} />
       <ul className="mt-3 grid gap-2.5">
         {tree.map((r, i) => (
           <Pop key={r.t} delay={0.1 + i * 0.08}>
@@ -126,7 +126,7 @@ function ExecDashboard({ vi }: P) {
   const line = "M0 60 C 30 55, 50 40, 80 44 S 130 22, 160 26 S 210 10, 240 6";
   return (
     <Panel className="h-full">
-      <Head icon={TrendingUp} title={vi ? "Dashboard điều hành" : "Executive dashboard"} right={<span className="text-[10px] font-semibold text-subtle">{vi ? "Tuần 6" : "Week 6"}</span>} />
+      <Head icon={TrendingUp} title={vi ? "Bảng điều hành" : "Executive dashboard"} right={<span className="text-[10px] font-semibold text-subtle">{vi ? "Tuần 6" : "Week 6"}</span>} />
       <div className="mt-3 grid grid-cols-3 gap-2">
         {kpis.map((k, i) => (
           <Pop key={k.k} delay={0.1 + i * 0.08} className="rounded-xl bg-sunken p-2.5">
@@ -155,7 +155,7 @@ function AiAssistant({ vi }: P) {
     <Panel className="h-full">
       <Head icon={Sparkles} title={vi ? "AI gợi ý mục tiêu" : "AI goal assistant"} />
       <Pop delay={0.1} className="mt-3 rounded-xl bg-sunken px-3 py-2 text-[11px] text-muted">
-        {vi ? "“Mục tiêu Q4 cho đội Kinh doanh, bám chiến lược kênh đại lý”" : "“Q4 goals for Sales, aligned with the dealer-channel strategy”"}
+        {vi ? "“Mục tiêu quý 4 cho đội kinh doanh, bám chiến lược kênh đại lý”" : "“Q4 goals for Sales, aligned with the dealer-channel strategy”"}
       </Pop>
       <ul className="mt-3 grid gap-2">
         {sugg.map((s, i) => (
@@ -175,7 +175,7 @@ function AiAssistant({ vi }: P) {
 function MeetingAgenda({ vi }: P) {
   const items = vi
     ? [
-        { t: "Review scoreboard tuần", s: "done" },
+        { t: "Xem bảng điểm tuần", s: "done" },
         { t: "3 mục tiêu đang đỏ — nguyên nhân", s: "done" },
         { t: "Gỡ vướng: kho miền Bắc", s: "now" },
         { t: "Cam kết tuần tới (mỗi người 1–3)", s: "next" },
@@ -188,7 +188,7 @@ function MeetingAgenda({ vi }: P) {
       ];
   return (
     <Panel className="h-full">
-      <Head icon={ListChecks} title={vi ? "Họp WIG · Thứ Hai 8:30" : "WIG meeting · Mon 8:30"} right={<span className="flex items-center gap-1 text-[10px] font-semibold text-subtle"><Clock className="size-3" /> 30'</span>} />
+      <Head icon={ListChecks} title={vi ? "Họp tuần 4DX · Thứ Hai 8:30" : "WIG meeting · Mon 8:30"} right={<span className="flex items-center gap-1 text-[10px] font-semibold text-subtle"><Clock className="size-3" /> 30'</span>} />
       <ol className="mt-3 grid gap-2">
         {items.map((it, i) => (
           <Pop key={it.t} delay={0.1 + i * 0.12}>
@@ -205,7 +205,7 @@ function MeetingAgenda({ vi }: P) {
         {["bg-brand", "bg-fg/70", "bg-emerald-500", "bg-sky-500"].map((c, i) => (
           <span key={i} className={`size-6 rounded-full border-2 border-elev ${c}`} />
         ))}
-        <span className="pl-3 text-[11px] text-muted">{vi ? "4 owner đã cập nhật" : "4 owners updated"}</span>
+        <span className="pl-3 text-[11px] text-muted">{vi ? "4 người phụ trách đã cập nhật" : "4 owners updated"}</span>
       </div>
     </Panel>
   );
@@ -322,7 +322,7 @@ function QuoteDoc({ vi }: P) {
       ];
   return (
     <Panel className="h-full">
-      <Head icon={FileText} title={vi ? "Báo giá #BG-204" : "Quote #BG-204"} right={<span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">{vi ? "Giá đại lý C1" : "C1 pricing"}</span>} />
+      <Head icon={FileText} title={vi ? "Báo giá #BG-204" : "Quote #BG-204"} right={<span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-bold text-emerald-600">{vi ? "Giá đại lý cấp 1" : "C1 pricing"}</span>} />
       <table className="mt-3 w-full text-[11px]">
         <tbody>
           {rows.map(([k, v], i) => (
@@ -373,7 +373,7 @@ function Adoption({ vi }: P) {
   const bars = [32, 45, 51, 63, 70, 78, 86];
   return (
     <Panel className="h-full">
-      <Head icon={Users} title={vi ? "Adoption theo tuần" : "Weekly adoption"} right={<span className="text-[11px] font-bold text-emerald-600">86%</span>} />
+      <Head icon={Users} title={vi ? "Mức sử dụng theo tuần" : "Weekly adoption"} right={<span className="text-[11px] font-bold text-emerald-600">86%</span>} />
       <div className="mt-4 flex h-28 items-end gap-2">
         {bars.map((h, i) => (
           <motion.div key={i} className={`flex-1 rounded-t-md ${i === bars.length - 1 ? "bg-brand" : "bg-brand/30"}`} initial={{ height: 0 }} whileInView={{ height: `${h}%` }} viewport={view} transition={{ delay: 0.1 + i * 0.07, duration: 0.8, ease }} />
@@ -422,7 +422,7 @@ function SensorList({ vi }: P) {
 function DataStream({ vi }: P) {
   return (
     <Panel className="h-full">
-      <Head icon={Wifi} title="Datalogger" right={<span className="text-[10px] font-semibold text-subtle">{vi ? "mỗi 5 phút" : "every 5 min"}</span>} />
+      <Head icon={Wifi} title={vi ? "Bộ ghi dữ liệu" : "Datalogger"} right={<span className="text-[10px] font-semibold text-subtle">{vi ? "mỗi 5 phút" : "every 5 min"}</span>} />
       <div className="mt-4 flex items-center gap-2">
         {[Radio, Database, Monitor].map((Icon, i) => (
           <div key={i} className="contents">
@@ -463,7 +463,7 @@ function AlertConsole({ vi }: P) {
   const color = { rose: "bg-rose-500", amber: "bg-amber-500", emerald: "bg-emerald-500" } as const;
   return (
     <Panel className="h-full">
-      <Head icon={AlertTriangle} title={vi ? "Cảnh báo & sự cố" : "Alerts & incidents"} right={<span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold text-rose-600">2</span>} />
+      <Head icon={AlertTriangle} title={vi ? "Cảnh báo và sự cố" : "Alerts & incidents"} right={<span className="rounded-full bg-rose-500/15 px-2 py-0.5 text-[10px] font-bold text-rose-600">2</span>} />
       <ul className="mt-3 grid gap-2">
         {alerts.map((a, i) => (
           <Pop key={a.t} delay={0.12 * i}>
@@ -476,7 +476,7 @@ function AlertConsole({ vi }: P) {
         ))}
       </ul>
       <Pop delay={0.5} className="mt-3 flex items-center gap-2 rounded-xl bg-tint-orange px-3 py-2 text-[11px] font-semibold">
-        <MessageSquare className="size-3.5 text-brand" aria-hidden="true" /> {vi ? "Đã gửi SMS + email cho 3 người phụ trách" : "SMS + email sent to 3 owners"}
+        <MessageSquare className="size-3.5 text-brand" aria-hidden="true" /> {vi ? "Đã nhắn tin và gửi email cho 3 người phụ trách" : "SMS + email sent to 3 owners"}
       </Pop>
     </Panel>
   );
@@ -505,7 +505,7 @@ function PublicAqi({ vi }: P) {
           <p>NO2 18 µg/m³</p>
         </div>
       </div>
-      <p className="mt-3 text-[11px] text-muted">{vi ? "Cập nhật real-time trên website Sở và bảng LED cổng KCN" : "Real-time on the agency website and the park's LED board"}</p>
+      <p className="mt-3 text-[11px] text-muted">{vi ? "Cập nhật trực tiếp trên trang web của Sở và bảng LED cổng KCN" : "Real-time on the agency website and the park's LED board"}</p>
     </Panel>
   );
 }

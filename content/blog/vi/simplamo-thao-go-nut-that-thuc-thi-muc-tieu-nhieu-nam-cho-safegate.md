@@ -4,7 +4,7 @@ description: "Safegate từng áp dụng nhiều phần mềm quản trị nhưn
 date: "2023-02-22"
 updated: "2023-11-03"
 image: "/blog/simplamo-thao-go-nut-that-thuc-thi-muc-tieu-nhieu-nam-cho-safegate/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 “Safegate đã từng áp dụng rất nhiều phần mềm quản trị nhưng không có cái nào hiệu quả, kể cả phần mềm được truyền thông rất nhiều tại Việt Nam hiện nay. Phần mềm của họ **không có triết lý kinh doanh**, và họ không thật sự quản trị doanh nghiệp hiệu quả bằng phần mềm đó nhưng vẫn cung cấp giải pháp cho doanh nghiệp, cuối cùng là tô vẽ rất nhiều thứ hoành tráng nhưng vẫn không dùng được.

@@ -4,7 +4,7 @@ description: "Sovigaz triển khai Simplamo để phân rã mục tiêu khoa h�
 date: "2023-07-04"
 updated: "2024-02-26"
 image: "/blog/sovigaz-nang-cao-nang-luc-thuc-thi-muc-tieu-simplamo/Hinh-anh-casestudy-86.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 [Công ty Cổ phần Hơi kỹ nghệ Que Hàn](https://sovigaz.com.vn/) là doanh nghiệp nhà nước dẫn đầu về sản xuất các sản phẩm khí y tế, khí công nghiệp, khí y tế, que hàn điện và hóa chất tại Việt Nam. Trong suốt hơn 45 năm hoạt động, đến nay Sovigaz đã trở thành nhà sản xuất khí công nghiệp, que hàn điện và hóa chất hàng đầu Việt Nam và trở thành thương hiệu uy tín trong các ngành công nghiệp với sứ mệnh cao cả “phục vụ dân sinh”, có trách nhiệm với xã hội.

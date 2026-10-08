@@ -4,7 +4,7 @@ description: "Tập đoàn Austdoor có quy mô lớn nằm trong top 500 doanh 
 date: "2025-05-22"
 updated: "2025-06-12"
 image: "/blog/tap-doan-austdoor-trien-khai-bsc-kpi-tren-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Với quy mô 5 nhà máy trên cả nước và hơn 1.000 CBCNV, Tập đoàn Austdoor Việt Nam (ADG) hiện nằm trong top 500 Doanh nghiệp tư nhân lớn nhất Việt Nam.

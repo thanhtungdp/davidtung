@@ -3,7 +3,7 @@ title: "Sovigaz Khởi Động Năm 2024: Xây Dựng Tầm Nhìn Doanh Nghiệp
 description: "Sovigaz mở đầu năm 2024 bằng cuộc họp 2 ngày cùng Simplamo, tập trung xây dựng tầm nhìn và chiến lược phát triển cho doanh nghiệp."
 date: "2024-01-17"
 image: "/blog/sovigaz-khoi-dong-nam-2024-xay-dung-tam-nhin-doanh-nghiep-cung-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 Ngày 08 và 09.01.2024, Sovigaz đã mở đầu cho hành trình cho một năm mới bằng cách tổ chức một cuộc họp kéo dài 2 ngày, tập trung chủ yếu vào việc xây dựng **Tầm nhìn và chiến lược** cho doanh nghiệp.

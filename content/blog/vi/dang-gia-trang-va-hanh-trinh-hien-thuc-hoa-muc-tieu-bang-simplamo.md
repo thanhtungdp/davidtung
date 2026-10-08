@@ -4,7 +4,7 @@ description: "Đặng Gia Trang, đơn vị cung cấp phân trùn quế hàng �
 date: "2023-01-12"
 updated: "2023-12-14"
 image: "/blog/dang-gia-trang-va-hanh-trinh-hien-thuc-hoa-muc-tieu-bang-simplamo/featured.webp"
-tags: ["Case study Simplamo"]
+tags: ["Dự án Simplamo"]
 ---
 
 *Đặng Gia Trang là đơn vị cung cấp phân trùn quế hàng đầu tại Việt Nam với thương hiệu SFARM. Hiện tại Đặng Gia Trang hoạt động với hơn 1000+ điểm bán (offline, online) có mặt tại các thành phố của 63 tỉnh thành trên cả nước.*
