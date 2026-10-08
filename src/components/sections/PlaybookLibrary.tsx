@@ -11,14 +11,26 @@ import { BookCover } from "@/components/mockups/BookCover";
 
 type Labels = Dictionary["playbookPage"] & { pages: string };
 
-function count(list: Entry[], pick: (e: Entry) => string[]) {
+export function count(list: Entry[], pick: (e: Entry) => string[]) {
   const m = new Map<string, number>();
   list.forEach((e) => pick(e).forEach((k) => m.set(k, (m.get(k) ?? 0) + 1)));
   return Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
 }
 
-function FilterGroup({ title, items, selected, onToggle }: { title: string; items: [string, number][]; selected: Set<string>; onToggle: (k: string) => void }) {
-  const [open, setOpen] = useState(true);
+export function FilterGroup({
+  title,
+  items,
+  selected,
+  onToggle,
+  defaultOpen = true,
+}: {
+  title: string;
+  items: [string, number][];
+  selected: Set<string>;
+  onToggle: (k: string) => void;
+  defaultOpen?: boolean;
+}) {
+  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="rounded-2xl border border-line bg-elev">
       <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold">

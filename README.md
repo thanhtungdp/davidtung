@@ -31,23 +31,23 @@ Each locale has its own root layout so `<html lang>` is correct:
 
 | What | Where |
 | --- | --- |
-| Blog posts | `content/blog/{vi,en}/<slug>.md` — use the same slug in both languages |
-| Playbooks | `content/playbooks/{vi,en}/<slug>.md` (`series`, `pages` in frontmatter) |
+| Blog posts | `content/blog/{vi,en}/<slug>.md` — same slug in both languages; a post may exist in one language only |
+| Playbooks | `content/playbooks/{vi,en}/<slug>.md` + PDF in `public/playbooks/` |
+| Images | `public/blog/<slug>/*.webp`, `public/playbooks/*.webp` |
 | Case studies | `src/content/projects.ts` |
 | Hermes / About copy, client names, tech stack | `src/content/pages.ts` |
 
-Blog and playbook bodies are currently **placeholders** — replace the Markdown files with the real articles.
+Blog and playbook content was imported from the old Astro site with `scripts/import-old-site.py` (images converted to WebP, max 1600px). Re-run it to sync again:
 
-Frontmatter:
-
-```yaml
----
-title: "…"
-description: "…"
-date: 2026-07-06
-tags: ["AI", "Chiến lược"]
----
+```bash
+git clone --depth 1 https://github.com/thanhtungdp/thanhtung-website ../thanhtung-website
+python3 scripts/import-old-site.py ../thanhtung-website .
 ```
+
+Interactive blocks go in Markdown as `<div data-embed="Name"></div>` and are mapped in `src/components/blog/Embed.tsx`.
+
+Blog frontmatter: `title`, `description`, `date`, optional `updated`, `image`, `tags`.
+Playbook frontmatter adds `series`, `pages`, `pdf`, `summary`, `keyTakeaway`, `toc`, `topic`, `audience`, `tint`.
 
 ## Booking survey (`/booking/`)
 

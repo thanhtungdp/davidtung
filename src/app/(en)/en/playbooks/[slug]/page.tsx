@@ -14,7 +14,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const entry = getEntry("playbooks", "en", slug);
-  return entry ? pageMetadata("en", `/playbooks/${slug}/`, { title: entry.title, description: entry.description }) : {};
+  const locales = getSlugs("playbooks", "vi").includes(slug) ? (["vi", "en"] as const) : (["en"] as const);
+  return entry ? pageMetadata("en", `/playbooks/${slug}/`, { title: entry.title, description: entry.description, image: entry.image, locales }) : {};
 }
 
 export default async function Page({ params }: Props) {

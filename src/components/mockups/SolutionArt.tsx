@@ -76,7 +76,7 @@ function Goals({ vi }: { vi: boolean }) {
       <In>
         <Panel className="h-full">
           <div className="flex items-center justify-between">
-            <p className="text-sm font-bold">{vi ? "Cây mục tiêu · Q4" : "Goal tree · Q4"}</p>
+            <p className="text-sm font-bold">{vi ? "Cây mục tiêu · Quý 4" : "Goal tree · Q4"}</p>
             <span className="rounded-full bg-tint-orange px-2 py-0.5 text-[10px] font-bold text-brand">OKR</span>
           </div>
           <ul className="mt-3 grid gap-3">
@@ -99,7 +99,7 @@ function Goals({ vi }: { vi: boolean }) {
         <Panel className="h-full">
           <p className="text-[11px] font-semibold text-subtle">{vi ? "Nhịp họp tuần" : "Weekly meeting"}</p>
           <div className="mt-3 grid gap-2">
-            {(vi ? ["Review chỉ số", "Gỡ vướng mắc", "Cam kết tuần tới"] : ["Review metrics", "Clear blockers", "Commit next week"]).map((x, i) => (
+            {(vi ? ["Xem lại chỉ số", "Gỡ vướng mắc", "Cam kết tuần tới"] : ["Review metrics", "Clear blockers", "Commit next week"]).map((x, i) => (
               <motion.div
                 key={x}
                 className="flex items-center gap-2 rounded-lg bg-sunken px-2.5 py-2 text-xs"
@@ -134,7 +134,7 @@ function Agent({ vi }: { vi: boolean }) {
               <Bot className="size-3.5" aria-hidden="true" />
             </span>
             <p className="text-xs font-bold">Sale AI</p>
-            <span className="ml-auto text-[10px] font-semibold text-emerald-600">● online</span>
+            <span className="ml-auto text-[10px] font-semibold text-emerald-600">● {vi ? "đang chạy" : "online"}</span>
           </div>
           <div className="mt-3 grid gap-2 text-[11px]">
             <motion.p className="ml-auto max-w-[80%] rounded-xl rounded-br-sm bg-invert px-2.5 py-1.5 text-invert-fg" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={view} transition={{ delay: 0.2 }}>
@@ -183,7 +183,7 @@ function Hermes({ vi }: { vi: boolean }) {
             ))}
           </div>
           <motion.div className="mt-3 rounded-xl border border-line p-2.5 text-[11px]" initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }} viewport={view} transition={{ delay: 0.8 }}>
-            <p className="font-semibold">{vi ? "✓ Đã gửi email + đồng bộ CRM" : "✓ Email sent + CRM synced"}</p>
+            <p className="font-semibold">{vi ? "✓ Đã gửi email và cập nhật CRM" : "✓ Email sent + CRM synced"}</p>
             <p className="mt-0.5 text-muted">{vi ? "Hermès Sales · 12 giây" : "Hermès Sales · 12 seconds"}</p>
           </motion.div>
         </Panel>
@@ -288,7 +288,7 @@ function Rhythm({ vi }: { vi: boolean }) {
                 </span>
               ))}
             </span>
-            <span className="text-muted">{vi ? "3 owner · 12 chỉ số" : "3 owners · 12 metrics"}</span>
+            <span className="text-muted">{vi ? "3 người phụ trách · 12 chỉ số" : "3 owners · 12 metrics"}</span>
           </div>
         </Panel>
       </In>

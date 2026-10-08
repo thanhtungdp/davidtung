@@ -7,7 +7,14 @@ import { Reveal } from "@/components/motion/Reveal";
 export function PostCard({ post, locale, readLabel, minutesLabel, i = 0 }: { post: Entry; locale: Locale; readLabel: string; minutesLabel: string; i?: number }) {
   return (
     <Reveal delay={(i % 3) * 0.08} className="h-full">
-      <Link href={localePath(locale, `/blog/${post.slug}/`)} className="card group flex h-full flex-col p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand/40 sm:p-7">
+      <Link href={localePath(locale, `/blog/${post.slug}/`)} className="card group flex h-full flex-col overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:border-brand/40">
+        {post.image && (
+          <div className="aspect-[16/9] overflow-hidden bg-sunken">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.image} alt="" loading="lazy" decoding="async" className="size-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+          </div>
+        )}
+        <div className="flex flex-1 flex-col p-5 sm:p-6">
         <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-subtle">
           <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
           <span aria-hidden="true">·</span>
@@ -29,6 +36,7 @@ export function PostCard({ post, locale, readLabel, minutesLabel, i = 0 }: { pos
             {readLabel}
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
           </span>
+        </div>
         </div>
       </Link>
     </Reveal>
