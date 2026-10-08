@@ -24,7 +24,7 @@ export function ButtonLink({
   className?: string;
 }) {
   const external = /^(https?:|mailto:)/.test(href);
-  const cls = `group inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-semibold transition-all duration-300 active:scale-[0.97] ${styles[variant]} ${className}`;
+  const cls = `group inline-flex h-12 shrink-0 items-center whitespace-nowrap justify-center gap-2 rounded-full px-6 text-[15px] font-semibold transition-all duration-300 active:scale-[0.97] ${styles[variant]} ${className}`;
   const inner = (
     <>
       {children}

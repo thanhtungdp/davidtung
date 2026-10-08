@@ -26,7 +26,7 @@ function Float({ children, className, delay = 0, offset = 40 }: { children: Reac
 export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
   const spark = "M0 70 C 30 66, 50 52, 80 56 S 130 34, 160 38 S 210 18, 240 22 S 290 6, 320 4";
   return (
-    <div className="relative">
+    <div className="@container relative">
       {/* App window */}
       <div className="relative z-10 overflow-hidden rounded-[1.25rem] border border-line bg-elev shadow-[0_40px_120px_-30px_rgb(0_0_0/0.35)]">
         <div className="flex items-center gap-2 border-b border-line px-4 py-3">
@@ -36,17 +36,17 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
           <span className="ml-3 text-xs font-semibold text-muted">{t.app}</span>
           <span className="ml-auto rounded-full bg-sunken px-2.5 py-1 text-[11px] font-semibold text-muted">{t.period}</span>
         </div>
-        <div className="grid grid-cols-[52px_1fr] sm:grid-cols-[180px_1fr]">
+        <div className="grid grid-cols-[52px_1fr] @3xl:grid-cols-[170px_1fr]">
           <aside className="border-r border-line p-3">
             {[Target, TrendingUp, Bot, Radio].map((Icon, i) => (
               <div key={i} className={`mb-1.5 flex items-center gap-2 rounded-lg p-2 ${i === 0 ? "bg-brand-soft text-brand" : "text-subtle"}`}>
                 <Icon className="size-4 shrink-0" aria-hidden="true" />
-                <span className={`hidden h-2 rounded-full sm:block ${i === 0 ? "w-20 bg-brand/40" : "w-16 bg-line"}`} />
+                <span className={`hidden h-2 rounded-full @3xl:block ${i === 0 ? "w-20 bg-brand/40" : "w-16 bg-line"}`} />
               </div>
             ))}
           </aside>
-          <div className="grid gap-4 p-4 sm:p-6 md:grid-cols-[1.4fr_1fr]">
-            <div className="rounded-2xl border border-line p-4 sm:p-5">
+          <div className="grid gap-3 p-3 @md:p-4 @lg:grid-cols-[1.35fr_1fr]">
+            <div className="rounded-2xl border border-line p-4">
               <p className="text-sm font-bold">{t.okrTitle}</p>
               <ul className="mt-4 grid gap-4">
                 {t.okrs.map((o, i) => (
@@ -67,13 +67,13 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl bg-invert p-4 text-invert-fg sm:p-5">
+            <div className="rounded-2xl bg-invert p-4 text-invert-fg">
               <p className="text-xs font-semibold opacity-60">{t.kpiTitle}</p>
               <div className="mt-1 flex items-baseline gap-2">
-                <span className="text-3xl font-extrabold tracking-tight">{t.kpiValue}</span>
+                <span className="text-2xl font-extrabold tracking-tight @2xl:text-3xl">{t.kpiValue}</span>
                 <span className="rounded-full bg-brand px-2 py-0.5 text-[11px] font-bold text-white">{t.kpiDelta}</span>
               </div>
-              <svg viewBox="0 0 320 80" className="mt-4 h-20 w-full" fill="none" aria-hidden="true">
+              <svg viewBox="0 0 320 80" className="mt-3 h-16 w-full" fill="none" aria-hidden="true">
                 <defs>
                   <linearGradient id="spark-fill" x1="0" x2="0" y1="0" y2="1">
                     <stop offset="0" stopColor="var(--brand)" stopOpacity="0.35" />
@@ -114,7 +114,7 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
       </div>
 
       {/* Floating chips */}
-      <Float className="-left-3 top-[58%] sm:-left-10" delay={1.2} offset={50}>
+      <Float className="-bottom-8 -left-3 sm:-left-8" delay={1.2} offset={20}>
         <div className="flex items-center gap-3 rounded-2xl border border-line bg-elev/95 p-3 pr-5 shadow-xl backdrop-blur">
           <span className="grid size-10 place-items-center rounded-xl bg-brand text-white">
             <Bot className="size-5" aria-hidden="true" />
@@ -125,7 +125,7 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
           </div>
         </div>
       </Float>
-      <Float className="-top-16 right-6 hidden sm:block lg:-right-8" delay={1.45} offset={24}>
+      <Float className="-top-14 right-4 hidden sm:block" delay={1.45} offset={20}>
         <div className="flex items-center gap-2.5 rounded-full border border-line bg-elev/95 py-2 pl-2 pr-4 shadow-xl backdrop-blur">
           <span className="relative grid size-8 place-items-center rounded-full bg-emerald-500/15 text-emerald-600">
             <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500/30" />
@@ -136,7 +136,7 @@ export function HeroDashboard({ t }: { t: Dictionary["mockup"] }) {
           </p>
         </div>
       </Float>
-      <Float className="-bottom-6 right-6 hidden md:block" delay={1.7} offset={30}>
+      <Float className="-bottom-6 right-6 hidden md:block" delay={1.7} offset={20}>
         <div className="flex items-center gap-2 rounded-full bg-invert py-2.5 pl-3 pr-4 text-invert-fg shadow-xl">
           <Sun className="size-4 text-brand" aria-hidden="true" />
           <p className="text-[13px] font-semibold">{t.briefChip}</p>
