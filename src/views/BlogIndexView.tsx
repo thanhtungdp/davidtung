@@ -10,7 +10,7 @@ export function BlogIndexView({ locale }: { locale: Locale }) {
     <>
       <PageHero title={t.blog.title} lede={t.blog.lede} />
       <section className="container-x pb-12">
-        <BlogList posts={getEntries("blog", locale)} locale={locale} labels={{ all: t.blog.all, read: t.notes.read, minutes: t.blog.minutes }} />
+        <BlogList posts={getEntries("blog", locale)} locale={locale} labels={{ all: t.blog.all, read: t.notes.read, minutes: t.blog.minutes, more: t.blog.more }} />
       </section>
     </>
   );

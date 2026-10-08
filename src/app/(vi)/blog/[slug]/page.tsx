@@ -14,7 +14,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const entry = getEntry("blog", "vi", slug);
-  return entry ? pageMetadata("vi", `/blog/${slug}/`, { title: entry.title, description: entry.description }) : {};
+  const locales = getSlugs("blog", "en").includes(slug) ? (["vi", "en"] as const) : (["vi"] as const);
+  return entry ? pageMetadata("vi", `/blog/${slug}/`, { title: entry.title, description: entry.description, image: entry.image, locales }) : {};
 }
 
 export default async function Page({ params }: Props) {

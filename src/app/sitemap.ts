@@ -1,26 +1,22 @@
 import type { MetadataRoute } from "next";
-import { locales, localePath, siteUrl } from "@/i18n/config";
+import { locales, localePath, siteUrl, type Locale } from "@/i18n/config";
 import { projects } from "@/content/projects";
-import { getEntries } from "@/lib/content";
+import { getSlugs } from "@/lib/content";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = [
-    "/",
-    "/blog/",
-    "/playbooks/",
-    "/hermes/",
-    "/about/",
-    "/booking/",
-    ...projects.map((p) => `/projects/${p.slug}/`),
-    ...getEntries("blog", "vi").map((e) => `/blog/${e.slug}/`),
-    ...getEntries("playbooks", "vi").map((e) => `/playbooks/${e.slug}/`),
-  ];
-  return paths.flatMap((path) =>
-    locales.map((l) => ({
+  const pages = ["/", "/blog/", "/playbooks/", "/hermes/", "/about/", "/booking/", ...projects.map((p) => `/projects/${p.slug}/`)];
+  const entry = (path: string, available: readonly Locale[]) =>
+    available.map((l) => ({
       url: siteUrl + localePath(l, path),
-      alternates: { languages: Object.fromEntries(locales.map((x) => [x, siteUrl + localePath(x, path)])) },
-    })),
-  );
+      alternates: { languages: Object.fromEntries(available.map((x) => [x, siteUrl + localePath(x, path)])) },
+    }));
+
+  const collection = (kind: "blog" | "playbooks") => {
+    const slugs = new Set(locales.flatMap((l) => getSlugs(kind, l)));
+    return [...slugs].flatMap((slug) => entry(`/${kind}/${slug}/`, locales.filter((l) => getSlugs(kind, l).includes(slug))));
+  };
+
+  return [...pages.flatMap((p) => entry(p, locales)), ...collection("blog"), ...collection("playbooks")];
 }

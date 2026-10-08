@@ -14,6 +14,17 @@ export function LanguageSwitch({ locale, label }: { locale: Locale; label: strin
           <a
             key={l}
             href={switchLocalePath(pathname, l)}
+            onClick={(e) => {
+              if (active) return;
+              // If this page advertises its translations and lacks this locale,
+              // go to the matching section index instead of a 404.
+              const alts = document.querySelectorAll('link[rel="alternate"][hreflang]');
+              if (alts.length && !document.querySelector(`link[rel="alternate"][hreflang="${l}"]`)) {
+                e.preventDefault();
+                const section = pathname.replace(/^\/en(?=\/)/, "").match(/^\/(blog|playbooks)\//)?.[0] ?? "/";
+                window.location.href = switchLocalePath(section, l);
+              }
+            }}
             hrefLang={l}
             aria-current={active ? "true" : undefined}
             className={`relative z-10 grid h-8 w-9 place-items-center rounded-full uppercase transition-colors ${

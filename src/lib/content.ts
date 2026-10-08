@@ -23,10 +23,21 @@ export type Entry = {
   tint?: "orange" | "mint" | "lilac" | "butter" | "sky" | "rose";
   cover?: "arcs" | "steps" | "rings" | "grid" | "waves" | "dots";
   featured?: boolean;
+  /** Cover image URL (blog hero image or playbook cover). */
+  image?: string;
+  updated?: string;
+  /** Playbook PDF URL. */
+  pdf?: string;
+  summary?: string[];
+  keyTakeaway?: string;
+  toc?: { id: string; title: string; description?: string }[];
   readingMinutes: number;
 };
 
-export type EntryWithBody = Entry & { html: string; headings: Heading[] };
+/** Article body split around interactive embeds (`<div data-embed="Name"></div>` in Markdown). */
+export type BodyPart = { type: "html"; html: string } | { type: "embed"; name: string };
+
+export type EntryWithBody = Entry & { html: string; parts: BodyPart[]; headings: Heading[] };
 
 const root = path.join(process.cwd(), "content");
 
@@ -58,6 +69,12 @@ function readFile(collection: Collection, locale: Locale, file: string) {
     tint: data.tint,
     cover: data.cover,
     featured: data.featured,
+    image: data.image,
+    updated: data.updated ? new Date(data.updated).toISOString() : undefined,
+    pdf: data.pdf,
+    summary: data.summary,
+    keyTakeaway: data.keyTakeaway,
+    toc: data.toc,
     readingMinutes: Math.max(1, Math.round(words / 220)),
   };
   return { entry, content };
@@ -81,19 +98,31 @@ export function getEntry(collection: Collection, locale: Locale, slug: string): 
   const { entry, content } = readFile(collection, locale, file);
 
   const headings: Heading[] = [];
+  const seen = new Map<string, number>();
   const marked = new Marked({
     renderer: {
       heading({ tokens, depth }) {
         const text = this.parser.parseInline(tokens);
         const plain = text.replace(/<[^>]+>/g, "");
-        const id = slugify(plain);
+        const base = slugify(plain) || "section";
+        const n = seen.get(base) ?? 0;
+        seen.set(base, n + 1);
+        const id = n ? `${base}-${n}` : base;
         if (depth === 2) headings.push({ id, text: plain });
         return `<h${depth} id="${id}">${text}</h${depth}>`;
+      },
+      image({ href, title, text }) {
+        const t = title ? ` title="${title}"` : "";
+        return `<img src="${href}" alt="${text}"${t} loading="lazy" decoding="async" />`;
       },
     },
   });
   const html = marked.parse(content, { async: false });
-  return { ...entry, html, headings };
+  const parts: BodyPart[] = html
+    .split(/<div data-embed="([A-Za-z]+)"><\/div>/)
+    .map((chunk, i) => (i % 2 ? { type: "embed" as const, name: chunk } : { type: "html" as const, html: chunk }))
+    .filter((p) => p.type === "embed" || p.html.trim());
+  return { ...entry, html, parts, headings };
 }
 
 export function getSlugs(collection: Collection, locale: Locale) {
