@@ -63,7 +63,7 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
         <motion.div
           layout
           transition={spring}
-          className={`glass pointer-events-auto flex items-center rounded-full ${compact ? "gap-0 p-1" : "w-full max-w-md justify-between p-1"}`}
+          className="glass pointer-events-auto flex w-full max-w-md items-center justify-between rounded-full p-1"
         >
           {items.map((item, i) => {
             const active = i === activeIndex;
@@ -104,13 +104,15 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
                 </motion.span>
               </>
             );
-            const cls = `relative grid w-full place-items-center rounded-full outline-none ${compact ? "h-11 w-12" : "h-[3.25rem] px-1"}`;
+            // Compact (scrolling down) only hides labels and trims height; widths never change,
+            // so icons keep their slots and stay easy to tap.
+            const cls = `relative grid w-full place-items-center rounded-full px-1 outline-none transition-[height] duration-300 ${compact ? "h-12" : "h-[3.25rem]"}`;
             return item.onClick ? (
-              <motion.button key="more" type="button" whileTap={{ scale: 0.88 }} onClick={item.onClick} aria-expanded={sheet} aria-label={item.label} className={`${cls} ${compact ? "" : "min-w-0 flex-1"}`}>
+              <motion.button key="more" type="button" whileTap={{ scale: 0.88 }} onClick={item.onClick} aria-expanded={sheet} aria-label={item.label} className={`${cls} min-w-0 flex-1`}>
                 {inner}
               </motion.button>
             ) : (
-              <motion.div key={item.href} whileTap={{ scale: 0.88 }} className={compact ? "" : "min-w-0 flex-1"}>
+              <motion.div key={item.href} whileTap={{ scale: 0.88 }} className="min-w-0 flex-1">
                 <Link href={item.href} aria-current={active ? "page" : undefined} aria-label={item.label} className={cls}>
                   {inner}
                 </Link>
