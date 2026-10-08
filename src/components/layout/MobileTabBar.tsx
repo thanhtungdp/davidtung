@@ -59,11 +59,11 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
 
   return (
     <>
-      <nav aria-label="Tab bar" className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden">
+      <nav aria-label="Tab bar" className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:hidden">
         <motion.div
           layout
           transition={spring}
-          className={`glass pointer-events-auto flex items-center rounded-full ${compact ? "gap-0 p-1" : "gap-0.5 p-1.5"}`}
+          className={`glass pointer-events-auto flex items-center rounded-full ${compact ? "gap-0 p-1" : "w-full max-w-md justify-between p-1"}`}
         >
           {items.map((item, i) => {
             const active = i === activeIndex;
@@ -95,7 +95,7 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
-                        className={`overflow-hidden whitespace-nowrap text-[10px] font-semibold leading-tight ${active ? "text-brand" : "text-fg/70"}`}
+                        className={`max-w-full overflow-hidden truncate text-[10px] font-semibold leading-tight ${active ? "text-brand" : "text-fg/70"}`}
                       >
                         {item.label}
                       </motion.span>
@@ -104,13 +104,13 @@ export function MobileTabBar({ locale, t, projects }: { locale: Locale; t: Dicti
                 </motion.span>
               </>
             );
-            const cls = `relative grid place-items-center rounded-full outline-none ${compact ? "h-11 w-12" : "h-[3.25rem] min-w-[3.9rem] px-2"}`;
+            const cls = `relative grid w-full place-items-center rounded-full outline-none ${compact ? "h-11 w-12" : "h-[3.25rem] px-1"}`;
             return item.onClick ? (
-              <motion.button key="more" type="button" whileTap={{ scale: 0.88 }} onClick={item.onClick} aria-expanded={sheet} aria-label={item.label} className={cls}>
+              <motion.button key="more" type="button" whileTap={{ scale: 0.88 }} onClick={item.onClick} aria-expanded={sheet} aria-label={item.label} className={`${cls} ${compact ? "" : "min-w-0 flex-1"}`}>
                 {inner}
               </motion.button>
             ) : (
-              <motion.div key={item.href} whileTap={{ scale: 0.88 }}>
+              <motion.div key={item.href} whileTap={{ scale: 0.88 }} className={compact ? "" : "min-w-0 flex-1"}>
                 <Link href={item.href} aria-current={active ? "page" : undefined} aria-label={item.label} className={cls}>
                   {inner}
                 </Link>

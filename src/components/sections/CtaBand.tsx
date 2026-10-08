@@ -15,7 +15,7 @@ export function CtaBand({ t, secondaryHref, primaryHref = contact.mailto }: { t:
             aria-hidden="true"
           />
           <div className="relative">
-            <h2 className="display mx-auto max-w-3xl text-4xl sm:text-6xl">{t.title}</h2>
+            <h2 className="display mx-auto max-w-3xl text-[1.85rem] sm:text-6xl">{t.title}</h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/70">{t.body}</p>
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <ButtonLink href={primaryHref}>{t.primary}</ButtonLink>

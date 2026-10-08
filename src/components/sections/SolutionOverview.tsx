@@ -14,16 +14,16 @@ export function SolutionOverview({ locale }: { locale: Locale }) {
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <Reveal>
               <span className="inline-flex rounded-full bg-tint-orange px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand">{s.overview}</span>
-              <h2 className="display mt-5 text-4xl sm:text-5xl lg:text-[3.5rem]">{s.overviewTitle}</h2>
+              <h2 className="display mt-5 text-[1.85rem] sm:text-5xl lg:text-[3.5rem]">{s.overviewTitle}</h2>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="text-lg leading-relaxed text-muted lg:text-xl">{s.overviewLede}</p>
+              <p className="text-base leading-relaxed sm:text-lg text-muted lg:text-xl">{s.overviewLede}</p>
             </Reveal>
           </div>
-          <div className="mt-12">
+          <div className="mt-8 sm:mt-12">
             <SolutionGrid locale={locale} />
           </div>
-          <Reveal className="mt-12 flex justify-center">
+          <Reveal className="mt-8 sm:mt-12 flex justify-center">
             <ButtonLink href={localePath(locale, "/booking/")}>{s.tour}</ButtonLink>
           </Reveal>
         </div>

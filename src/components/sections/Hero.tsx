@@ -8,7 +8,7 @@ import { ButtonLink } from "@/components/ui/Button";
 export function Hero({ t, casesHref, bookingHref }: { t: Dictionary; casesHref: string; bookingHref: string }) {
   const h = t.hero;
   return (
-    <section className="relative overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-24 lg:pt-40">
+    <section className="relative overflow-hidden pb-16 pt-24 sm:pt-36 lg:pb-24 lg:pt-40">
       {/* Background: dot grid + warm glow behind the prototype */}
       <div className="grain absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,#000_20%,transparent_70%)]" aria-hidden="true" />
       <div
@@ -17,7 +17,7 @@ export function Hero({ t, casesHref, bookingHref }: { t: Dictionary; casesHref: 
       />
 
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1fr_1.08fr] lg:gap-12">
-        <div className="text-center lg:text-left">
+        <div>
           <Reveal y={12}>
             <span className="inline-flex items-center gap-2 rounded-full border border-line bg-elev/70 px-4 py-1.5 text-[13px] font-semibold text-muted backdrop-blur">
               <span className="relative flex size-2">
@@ -29,7 +29,7 @@ export function Hero({ t, casesHref, bookingHref }: { t: Dictionary; casesHref: 
           </Reveal>
 
           {/* Exactly two lines from sm up: titleA / highlight + titleB. Phones wrap naturally. */}
-          <h1 className="display mx-auto mt-6 text-[2.1rem] min-[400px]:text-[2.4rem] sm:text-5xl lg:mx-0 lg:text-[2.6rem] xl:text-[3.3rem]">
+          <h1 className="display mt-5 text-[2.1rem] min-[400px]:text-[2.4rem] sm:text-5xl lg:text-[2.6rem] xl:text-[3.3rem]">
             <span className="block sm:whitespace-nowrap">
               <SplitWords text={h.titleA} />
             </span>
@@ -43,9 +43,9 @@ export function Hero({ t, casesHref, bookingHref }: { t: Dictionary; casesHref: 
           </h1>
 
           <Reveal delay={0.5}>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted lg:mx-0">{h.lede}</p>
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">{h.lede}</p>
           </Reveal>
-          <Reveal delay={0.65} className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+          <Reveal delay={0.65} className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ButtonLink href={bookingHref}>{h.primary}</ButtonLink>
             <ButtonLink href={casesHref} variant="ghost" arrow={false}>
               {h.secondary}

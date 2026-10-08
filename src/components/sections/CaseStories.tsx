@@ -24,14 +24,14 @@ export function CaseStories({ locale, exclude, title }: { locale: Locale; exclud
       };
     });
   return (
-    <section id="cases" className="scroll-mt-20 py-20 sm:py-28">
+    <section id="cases" className="scroll-mt-20 py-12 sm:py-28">
       <div className="container-x">
         <Reveal>
           <span className="inline-flex rounded-full bg-tint-mint px-3 py-1 text-xs font-bold uppercase tracking-widest">{s.storiesPill}</span>
-          <h2 className="display mt-5 text-4xl sm:text-5xl">{title ?? s.storiesTitle}</h2>
+          <h2 className="display mt-5 text-[1.85rem] sm:text-5xl">{title ?? s.storiesTitle}</h2>
         </Reveal>
       </div>
-      <div className="mt-12">
+      <div className="mt-8 sm:mt-12">
         <StoryCarousel stories={stories} labels={{ story: s.story, prev: s.prev, next: s.next }} />
       </div>
     </section>

@@ -56,7 +56,7 @@ export function StoryCarousel({ stories, labels }: { stories: Story[]; labels: {
               <p className="text-xs font-bold uppercase tracking-widest text-brand">{s.tag}</p>
               <h3 className="mt-3 text-2xl font-extrabold tracking-tight">{s.name}</h3>
               <p className="text-sm font-semibold text-muted">{s.role}</p>
-              <p className="mt-5 text-lg leading-relaxed">{s.summary}</p>
+              <p className="mt-5 text-base leading-relaxed sm:text-lg">{s.summary}</p>
             </div>
             <div className="flex flex-col justify-between gap-6 border-line sm:border-l sm:pl-8">
               <div>

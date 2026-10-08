@@ -30,14 +30,14 @@ export function HomeView({ locale }: { locale: Locale }) {
       <Process t={t.process} />
       <HermesBand t={t.hermes} href={p("/hermes/")} />
 
-      <section className="container-x py-20 sm:py-28">
+      <section className="container-x py-12 sm:py-28">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeading eyebrow={t.playbooks.eyebrow} title={t.playbooks.title} lede={t.playbooks.lede} />
+          <SectionHeading title={t.playbooks.title} lede={t.playbooks.lede} />
           <ButtonLink href={p("/playbooks/")} variant="ghost">
             {t.playbooks.cta}
           </ButtonLink>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-5 md:grid-cols-3">
           {playbooks.map((pb, i) => (
             <Reveal key={pb.slug} delay={i * 0.08} className="h-full">
               <PlaybookCard2 pb={pb} locale={locale} pagesLabel={t.playbooks.pages} />
@@ -48,12 +48,12 @@ export function HomeView({ locale }: { locale: Locale }) {
 
       <section className="container-x pb-12">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeading eyebrow={t.notes.eyebrow} title={t.notes.title} />
+          <SectionHeading title={t.notes.title} />
           <ButtonLink href={p("/blog/")} variant="ghost">
             {t.notes.cta}
           </ButtonLink>
         </div>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-5 md:grid-cols-3">
           {posts.map((post, i) => (
             <PostCard key={post.slug} post={post} locale={locale} readLabel={t.notes.read} minutesLabel={t.blog.minutes} i={i} />
           ))}

@@ -13,8 +13,8 @@ export function Process({ t }: { t: Dictionary["process"] }) {
   const progress = useSpring(scrollYProgress, { stiffness: 90, damping: 25 });
 
   return (
-    <section className="container-x py-20 sm:py-28">
-      <SectionHeading eyebrow={t.eyebrow} title={t.title} />
+    <section className="container-x py-12 sm:py-28">
+      <SectionHeading title={t.title} />
       <div ref={ref} className="relative mt-16">
         {/* The road: drawn as you scroll */}
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="absolute inset-x-0 top-2 hidden h-24 w-full lg:block" fill="none" aria-hidden="true">

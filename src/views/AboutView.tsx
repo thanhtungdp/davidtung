@@ -11,7 +11,7 @@ export function AboutView({ locale }: { locale: Locale }) {
   const a = aboutPage[locale];
   return (
     <>
-      <PageHero eyebrow={a.eyebrow} title={a.title} lede={a.lede}>
+      <PageHero title={a.title} lede={a.lede}>
         <Reveal delay={0.4}>
           <p className="mt-6 text-sm font-semibold text-subtle">
             {t.footer.location} ·{" "}
@@ -56,7 +56,7 @@ export function AboutView({ locale }: { locale: Locale }) {
           <p className="display text-4xl italic sm:text-6xl">
             Simple &amp; More <span className="text-brand">X10</span>
           </p>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-invert-fg/70">{a.principleBody}</p>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed sm:text-lg text-invert-fg/70">{a.principleBody}</p>
         </Reveal>
       </section>
 

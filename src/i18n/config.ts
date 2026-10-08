@@ -26,5 +26,8 @@ export function formatDate(date: string, locale: Locale) {
     day: "numeric",
     month: "short",
     year: "numeric",
+    // Dates are calendar days from frontmatter; format in UTC so the static HTML
+    // and the visitor's browser agree regardless of their time zone.
+    timeZone: "UTC",
   }).format(new Date(date));
 }

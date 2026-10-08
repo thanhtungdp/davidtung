@@ -12,8 +12,8 @@ export function HermesBand({ t, href }: { t: Dictionary["hermes"]; href: string 
           <div className="grain absolute inset-0 opacity-30" aria-hidden="true" />
           <div className="relative">
             <p className="text-sm font-bold uppercase tracking-widest text-white/80">{t.eyebrow}</p>
-            <h2 className="display mt-4 text-4xl sm:text-5xl">{t.title}</h2>
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">{t.body}</p>
+            <h2 className="display mt-4 text-[1.85rem] sm:text-5xl">{t.title}</h2>
+            <p className="mt-5 max-w-xl text-base leading-relaxed sm:text-lg text-white/85">{t.body}</p>
             <ButtonLink href={href} variant="light" className="mt-8">
               {t.cta}
             </ButtonLink>

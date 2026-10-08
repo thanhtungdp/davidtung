@@ -5,7 +5,6 @@ import type { Locale } from "@/i18n/config";
 export const hermesPage: Record<
   Locale,
   {
-    eyebrow: string;
     titleA: string;
     titleHighlight: string;
     titleB: string;
@@ -28,7 +27,6 @@ export const hermesPage: Record<
   }
 > = {
   vi: {
-    eyebrow: "Đội ngũ AI tự chủ cho Solo CEO",
     titleA: "Biến",
     titleHighlight: "việc lặp lại",
     titleB: "thành agent tự chạy trong 4 tuần.",
@@ -70,7 +68,6 @@ export const hermesPage: Record<
     ],
   },
   en: {
-    eyebrow: "An autonomous AI team for Solo CEOs",
     titleA: "Turn",
     titleHighlight: "repetitive work",
     titleB: "into self-running agents in 4 weeks.",

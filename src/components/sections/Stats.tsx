@@ -6,8 +6,8 @@ import { SectionHeading } from "@/components/ui/Button";
 
 export function Stats({ t, locale }: { t: Dictionary["stats"]; locale: Locale }) {
   return (
-    <section className="container-x py-20 sm:py-28">
-      <SectionHeading eyebrow={t.eyebrow} title={t.title} align="center" />
+    <section className="container-x py-12 sm:py-28">
+      <SectionHeading title={t.title} align="center" />
       <Stagger className="mt-14 grid grid-cols-2 gap-px overflow-hidden rounded-[1.75rem] border border-line bg-line lg:grid-cols-4">
         {t.items.map((s, i) => (
           <StaggerItem key={s.label} className="group relative bg-elev p-6 sm:p-10">

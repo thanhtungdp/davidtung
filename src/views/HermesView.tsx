@@ -25,17 +25,11 @@ export function HermesView({ locale }: { locale: Locale }) {
   return (
     <>
       {/* Split hero with a live Telegram prototype */}
-      <section className="relative overflow-hidden pb-14 pt-32 sm:pt-36 lg:pt-40">
+      <section className="relative overflow-hidden pb-14 pt-24 sm:pt-36 lg:pt-40">
         <div className="grain absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,#000_15%,transparent_65%)]" aria-hidden="true" />
         <div className="container-x relative grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
           <div>
-            <Reveal y={10}>
-              <p className="eyebrow">
-                <span className="h-[3px] w-6 -skew-x-[30deg] rounded-full bg-brand" aria-hidden="true" />
-                {h.eyebrow}
-              </p>
-            </Reveal>
-            <h1 className="display mt-6 text-[2.5rem] sm:text-5xl xl:text-6xl">
+            <h1 className="display text-[2.1rem] sm:text-5xl xl:text-6xl">
               <SplitWords text={h.titleA} />{" "}
               <span className="relative inline-block">
                 <SplitWords text={h.titleHighlight} className="slant pr-[0.08em]" delay={0.15} />
@@ -44,7 +38,7 @@ export function HermesView({ locale }: { locale: Locale }) {
               <SplitWords text={h.titleB} delay={0.3} />
             </h1>
             <Reveal delay={0.4}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{h.lede}</p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg text-muted">{h.lede}</p>
             </Reveal>
             <Reveal delay={0.5} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={booking}>{h.cta}</ButtonLink>
@@ -99,17 +93,17 @@ export function HermesView({ locale }: { locale: Locale }) {
       </section>
 
       {/* Tools in, outcomes out */}
-      <section className="py-20 sm:py-28">
+      <section className="py-12 sm:py-28">
         <div className="container-x grid gap-6 lg:grid-cols-2 lg:items-end">
           <Reveal>
             <span className="inline-flex rounded-full bg-tint-mint px-3 py-1 text-xs font-bold uppercase tracking-widest">Hermes Core</span>
-            <h2 className="display mt-5 text-4xl sm:text-5xl">{h.toolsTitle}</h2>
+            <h2 className="display mt-5 text-[1.85rem] sm:text-5xl">{h.toolsTitle}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-lg leading-relaxed text-muted">{h.toolsBody}</p>
+            <p className="text-base leading-relaxed sm:text-lg text-muted">{h.toolsBody}</p>
           </Reveal>
         </div>
-        <Marquee className="mt-12" duration={30}>
+        <Marquee className="mt-8 sm:mt-12" duration={30}>
           {h.tools.map((x) => (
             <span key={x} className="mx-2 rounded-2xl border border-line bg-elev px-6 py-4 text-lg font-bold">
               {x}
@@ -132,8 +126,8 @@ export function HermesView({ locale }: { locale: Locale }) {
 
       {/* Before / after + cost of doing it all */}
       <section className="container-x pb-12">
-        <h2 className="display max-w-3xl text-4xl sm:text-5xl">{h.compareTitle}</h2>
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
+        <h2 className="display max-w-3xl text-[1.85rem] sm:text-5xl">{h.compareTitle}</h2>
+        <div className="mt-8 sm:mt-12 grid gap-4 md:grid-cols-2">
           <Reveal className="rounded-[1.5rem] border border-line bg-elev p-8">
             <p className="text-sm font-bold uppercase tracking-widest text-subtle">{h.before.label}</p>
             <ul className="mt-6 grid gap-4">
@@ -158,7 +152,7 @@ export function HermesView({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
 
-        <h2 className="display mt-24 max-w-3xl text-3xl sm:text-4xl">{h.costTitle}</h2>
+        <h2 className="display mt-14 max-w-3xl sm:mt-24 text-3xl sm:text-4xl">{h.costTitle}</h2>
         <Stagger className="mt-10 grid gap-px overflow-hidden rounded-[1.5rem] border border-line bg-line sm:grid-cols-3">
           {h.costs.map((c) => (
             <StaggerItem key={c.label} className="bg-elev p-8">

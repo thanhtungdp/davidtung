@@ -52,7 +52,6 @@ const vi = {
     label: "Đã triển khai cùng doanh nghiệp và cơ quan tại Việt Nam và khu vực",
   },
   stats: {
-    eyebrow: "Quy mô thật",
     title: "Không phải demo. Là hệ thống đang chạy mỗi ngày.",
     items: [
       { value: 1, suffix: "M+", label: "học sinh được tiếp cận" },
@@ -62,7 +61,6 @@ const vi = {
     ],
   },
   process: {
-    eyebrow: "Cách làm việc",
     title: "Bốn bước, một đường thẳng tới kết quả",
     steps: [
       { title: "Chẩn đoán", body: "Tìm điểm ma sát lớn nhất giữa chiến lược và vận hành hằng ngày." },
@@ -78,7 +76,6 @@ const vi = {
     cta: "Khám phá Hermes",
   },
   playbooks: {
-    eyebrow: "Playbook",
     title: "Sổ tay thực chiến cho Solo CEO",
     lede: "Phân tích có nguồn kiểm chứng, viết để dùng ngay trong đội nhóm.",
     cta: "Tất cả playbook",
@@ -86,7 +83,6 @@ const vi = {
     pages: "trang",
   },
   notes: {
-    eyebrow: "Ghi chú thực thi",
     title: "Bài học từ AI, sản phẩm và vận hành",
     cta: "Xem tất cả ghi chú",
     read: "Đọc bài",

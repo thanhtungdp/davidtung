@@ -236,7 +236,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
         <motion.div className="h-full origin-left bg-brand" animate={{ scaleX: step === DONE ? 1 : progress }} transition={{ type: "spring", stiffness: 120, damping: 24 }} />
       </div>
 
-      <div className="mx-auto grid min-h-[100dvh] w-full max-w-2xl items-start px-4 pb-16 pt-24 sm:items-center sm:px-6 sm:pb-28 sm:pt-28">
+      <div className="mx-auto grid min-h-[100dvh] w-full max-w-2xl items-start px-4 pb-10 pt-20 sm:items-center sm:px-6 sm:pb-28 sm:pt-28">
         <AnimatePresence mode="wait" custom={dir} initial={false}>
           <motion.div
             key={step}
@@ -254,9 +254,9 @@ export function BookingForm({ locale }: { locale: Locale }) {
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-tint-orange px-3 py-1 text-xs font-bold uppercase tracking-widest text-brand">
                   <Clock className="size-3.5" aria-hidden="true" /> {c.duration}
                 </span>
-                <h1 className="display mt-6 text-4xl sm:text-6xl">{c.title}</h1>
-                <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">{c.lede}</p>
-                <div className="mt-10 flex items-center gap-4">
+                <h1 className="display mt-5 text-[2rem] sm:mt-6 sm:text-6xl">{c.title}</h1>
+                <p className="mt-4 max-w-xl text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">{c.lede}</p>
+                <div className="mt-7 flex items-center gap-4 sm:mt-10">
                   <button type="button" onClick={() => go(0)} className="group inline-flex h-14 items-center gap-2 rounded-full bg-brand px-8 text-lg font-semibold text-white shadow-[0_10px_30px_-10px_var(--brand)] transition-transform active:scale-95">
                     {c.start}
                     <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -274,11 +274,11 @@ export function BookingForm({ locale }: { locale: Locale }) {
                   <ArrowRight className="size-3.5" aria-hidden="true" />
                   <span className="font-medium text-subtle">/ {qs.length}</span>
                 </p>
-                <h2 className="mt-3 text-2xl font-extrabold leading-snug tracking-tight sm:text-4xl" id={`q-${q.id}`}>
+                <h2 className="mt-2 text-xl font-extrabold leading-snug tracking-tight sm:mt-3 sm:text-4xl" id={`q-${q.id}`}>
                   {fill(q.title)}
                   {q.required && <span className="text-brand">&nbsp;*</span>}
                 </h2>
-                {(q.help || !q.required) && <p className={`mt-2 text-muted ${q.type === "textarea" ? "pointer-coarse:hidden" : ""}`}>{q.help ?? c.optional}</p>}
+                {(q.help || !q.required) && <p className={`mt-1.5 text-sm text-muted sm:mt-2 sm:text-base ${q.type === "textarea" ? "pointer-coarse:hidden" : ""}`}>{q.help ?? c.optional}</p>}
 
                 {(q.type === "text" || q.type === "email" || q.type === "tel") && (
                   <input
@@ -291,7 +291,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                     value={asText(answers[q.id])}
                     onChange={(e) => setAnswer(q.id, e.target.value)}
                     placeholder={q.placeholder}
-                    className="mt-8 w-full border-b-2 border-line bg-transparent pb-3 text-2xl outline-none transition-colors placeholder:text-fg/25 focus:border-brand sm:text-3xl"
+                    className="mt-5 w-full rounded-none border-b-2 border-line bg-transparent pb-2 text-xl outline-none transition-colors placeholder:text-fg/25 focus:border-brand sm:mt-8 sm:pb-3 sm:text-3xl"
                   />
                 )}
 
@@ -299,16 +299,16 @@ export function BookingForm({ locale }: { locale: Locale }) {
                   <textarea
                     ref={fieldRef}
                     aria-labelledby={`q-${q.id}`}
-                    rows={3}
+                    rows={4}
                     value={asText(answers[q.id])}
                     onChange={(e) => setAnswer(q.id, e.target.value)}
                     placeholder={q.placeholder}
-                    className="mt-8 w-full resize-none border-b-2 border-line bg-transparent pb-3 text-xl leading-relaxed outline-none transition-colors placeholder:text-fg/25 focus:border-brand sm:text-2xl"
+                    className="mt-5 w-full resize-none rounded-none border-b-2 border-line bg-transparent pb-2 text-lg leading-relaxed outline-none transition-colors placeholder:text-fg/25 focus:border-brand sm:mt-8 sm:pb-3 sm:text-2xl"
                   />
                 )}
 
                 {(q.type === "choice" || q.type === "multi") && (
-                  <div role={q.type === "multi" ? "group" : "radiogroup"} aria-labelledby={`q-${q.id}`} className={`mt-8 grid gap-2 ${q.options.length > 5 ? "sm:grid-cols-2" : "max-w-md"}`}>
+                  <div role={q.type === "multi" ? "group" : "radiogroup"} aria-labelledby={`q-${q.id}`} className={`mt-5 grid gap-2 sm:mt-8 ${q.options.length > 5 ? "sm:grid-cols-2" : "max-w-md"}`}>
                     {q.options.map((opt, i) => {
                       const v = answers[q.id];
                       const on = Array.isArray(v) ? v.includes(opt) : v === opt;
@@ -322,11 +322,11 @@ export function BookingForm({ locale }: { locale: Locale }) {
                           whileTap={{ scale: 0.97 }}
                           animate={on && q.type === "choice" ? { opacity: [1, 0.5, 1, 0.5, 1] } : { opacity: 1 }}
                           transition={{ duration: 0.4 }}
-                          className={`flex items-center gap-3 rounded-xl border-2 px-3 py-3 text-left text-[15px] font-medium transition-colors ${
+                          className={`flex min-h-12 items-center gap-3 rounded-xl border-2 px-3 py-2 text-left text-[15px] font-medium sm:py-3 transition-colors ${
                             on ? "border-brand bg-tint-orange" : "border-line bg-elev/70 hover:border-fg/30"
                           }`}
                         >
-                          <span className={`grid size-7 shrink-0 place-items-center rounded-md border text-xs font-bold ${on ? "border-brand bg-brand text-white" : "border-line text-muted"}`}>
+                          <span className={`grid size-6 shrink-0 place-items-center rounded-md border text-xs font-bold sm:size-7 ${on ? "border-brand bg-brand text-white" : "border-line text-muted"}`}>
                             {on ? <Check className="size-4" aria-hidden="true" /> : LETTERS[i]}
                           </span>
                           <span className="flex-1">{opt}</span>
@@ -345,7 +345,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                       animate={{ opacity: 1, x: [0, -8, 8, -5, 5, 0] }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className="mt-4 inline-flex items-center gap-2 rounded-lg bg-rose-500/10 px-3 py-2 text-sm font-semibold text-rose-600"
+                      className="mt-3 inline-flex items-center gap-2 rounded-lg bg-rose-500/10 px-3 py-2 text-sm font-semibold text-rose-600"
                     >
                       <AlertTriangle className="size-4" aria-hidden="true" /> {error}
                     </motion.p>
@@ -353,7 +353,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                 </AnimatePresence>
 
                 <div
-                  className={`mt-8 flex items-center gap-3 ${
+                  className={`mt-5 flex items-center gap-3 sm:mt-8 ${
                     q.type === "multi" ? "sticky bottom-0 -mx-4 bg-gradient-to-t from-bg via-bg to-transparent px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-6 sm:static sm:mx-0 sm:bg-none sm:p-0" : ""
                   }`}
                 >
@@ -371,12 +371,12 @@ export function BookingForm({ locale }: { locale: Locale }) {
             {/* Review */}
             {step === REVIEW && (
               <div>
-                <h2 className="display text-3xl sm:text-5xl">{c.reviewTitle}</h2>
-                <p className="mt-3 text-muted">{c.reviewLede}</p>
-                <ul className="mt-8 grid gap-2">
+                <h2 className="display text-[1.75rem] sm:text-5xl">{c.reviewTitle}</h2>
+                <p className="mt-2 text-sm text-muted sm:mt-3 sm:text-base">{c.reviewLede}</p>
+                <ul className="mt-5 grid gap-1.5 sm:mt-8 sm:gap-2">
                   {qs.map((qq, i) => (
                     <li key={qq.id}>
-                      <button type="button" onClick={() => go(i)} className="group flex w-full items-start gap-3 rounded-xl border border-line bg-elev/80 px-4 py-3 text-left transition-colors hover:border-brand">
+                      <button type="button" onClick={() => go(i)} className="group flex w-full items-start gap-3 rounded-xl border border-line bg-elev/80 px-3 py-2 text-left sm:px-4 sm:py-3 transition-colors hover:border-brand">
                         <span className="mt-0.5 text-xs font-bold text-brand">{i + 1}</span>
                         <span className="flex-1">
                           <span className="block text-xs text-subtle">{fill(qq.title)}</span>
@@ -392,7 +392,7 @@ export function BookingForm({ locale }: { locale: Locale }) {
                     <AlertTriangle className="size-4" aria-hidden="true" /> {c.error}
                   </p>
                 )}
-                <div className="mt-8 flex flex-wrap items-center gap-3">
+                <div className="mt-6 flex flex-wrap items-center gap-3 sm:mt-8">
                   <button
                     type="button"
                     disabled={status === "sending"}

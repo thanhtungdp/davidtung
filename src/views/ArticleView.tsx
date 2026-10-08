@@ -22,7 +22,7 @@ export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; loc
     <>
       <ScrollProgress />
       <article>
-        <header className="relative overflow-hidden pb-12 pt-36 sm:pt-44">
+        <header className="relative overflow-hidden pb-12 pt-24 sm:pt-44">
           <div className="grain absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,#000_10%,transparent_60%)]" aria-hidden="true" />
           <div className="container-x relative max-w-4xl">
             <Reveal y={10}>
@@ -45,7 +45,7 @@ export function ArticleView({ entry, locale, kind }: { entry: EntryWithBody; loc
                   {entry.readingMinutes} {t.blog.minutes}
                 </span>
               </div>
-              <h1 className="display mt-6 text-4xl sm:text-5xl lg:text-6xl">{entry.title}</h1>
+              <h1 className="display mt-6 text-[1.85rem] sm:text-5xl lg:text-6xl">{entry.title}</h1>
               <p className="mt-6 text-xl leading-relaxed text-muted">{entry.description}</p>
             </Reveal>
             {kind === "playbooks" && (

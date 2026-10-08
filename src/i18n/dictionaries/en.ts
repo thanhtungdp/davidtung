@@ -54,7 +54,6 @@ const en: Dictionary = {
     label: "Deployed with enterprises and public agencies across Vietnam and the region",
   },
   stats: {
-    eyebrow: "Real scale",
     title: "Not a demo. Systems that run every single day.",
     items: [
       { value: 1, suffix: "M+", label: "learners reached" },
@@ -64,7 +63,6 @@ const en: Dictionary = {
     ],
   },
   process: {
-    eyebrow: "How I work",
     title: "Four steps, one straight road to results",
     steps: [
       { title: "Diagnose", body: "Find the biggest friction between strategy and daily operations." },
@@ -80,7 +78,6 @@ const en: Dictionary = {
     cta: "Explore Hermes",
   },
   playbooks: {
-    eyebrow: "Playbooks",
     title: "Field manuals for Solo CEOs",
     lede: "Source-checked analysis, written to be used by your team right away.",
     cta: "All playbooks",
@@ -88,7 +85,6 @@ const en: Dictionary = {
     pages: "pages",
   },
   notes: {
-    eyebrow: "Execution notes",
     title: "Lessons from AI, product, and operations",
     cta: "View all notes",
     read: "Read article",

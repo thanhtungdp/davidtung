@@ -19,7 +19,7 @@ export function PlaybooksView({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <section className="relative pb-14 pt-32 text-center sm:pt-40">
+      <section className="relative pb-14 pt-24 text-center sm:pt-40">
         <div className="container-x">
           <Reveal y={8}>
             <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-1.5 text-sm text-subtle">
@@ -39,11 +39,11 @@ export function PlaybooksView({ locale }: { locale: Locale }) {
               </span>
             </Link>
           </Reveal>
-          <h1 className="display mx-auto mt-6 max-w-4xl text-5xl sm:text-6xl lg:text-7xl">
+          <h1 className="display mx-auto mt-6 max-w-4xl text-[2.2rem] sm:text-6xl lg:text-7xl">
             <SplitWords text={pt.title2} delay={0.15} />
           </h1>
           <Reveal delay={0.35}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">{pt.lede}</p>
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-xl">{pt.lede}</p>
           </Reveal>
         </div>
       </section>

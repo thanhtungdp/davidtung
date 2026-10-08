@@ -29,7 +29,7 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
   return (
     <>
       {/* 1 · Split hero with the product prototype */}
-      <section className="relative overflow-hidden pb-12 pt-32 sm:pt-36 lg:pb-16 lg:pt-40">
+      <section className="relative overflow-hidden pb-12 pt-24 sm:pt-36 lg:pb-16 lg:pt-40">
         <div className="container-x grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
           <div>
             <Reveal y={8}>
@@ -41,11 +41,11 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
                 <span className="text-fg">{c.name}</span>
               </nav>
             </Reveal>
-            <h1 className="display mt-6 text-[2.5rem] sm:text-5xl xl:text-6xl">
+            <h1 className="display mt-6 text-[2.1rem] sm:text-5xl xl:text-6xl">
               <SplitWords text={c.headline} />
             </h1>
             <Reveal delay={0.3}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">{c.lede}</p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg text-muted">{c.lede}</p>
             </Reveal>
             <Reveal delay={0.4} className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink href={localePath(locale, "/booking/")}>{t.project.discuss}</ButtonLink>
@@ -91,14 +91,14 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
       </section>
 
       {/* 4 · Highlights, like Lattice's "Habits" row */}
-      <section className="container-x py-20 sm:py-28">
+      <section className="container-x py-12 sm:py-28">
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <Reveal>
             <span className={`inline-flex rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest ${tintBg[project.tint]}`}>{c.name}</span>
-            <h2 className="display mt-5 text-4xl sm:text-5xl">{c.highlightsTitle}</h2>
+            <h2 className="display mt-5 text-[1.85rem] sm:text-5xl">{c.highlightsTitle}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-lg leading-relaxed text-muted">
+            <p className="text-base leading-relaxed sm:text-lg text-muted">
               <span className="font-bold text-fg">{c.closingTitle}</span> {c.closingBody}
             </p>
             <a href={localePath(locale, "/booking/")} className="mt-4 inline-flex items-center gap-1.5 border-b-2 border-brand pb-0.5 font-semibold">
@@ -106,7 +106,7 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
             </a>
           </Reveal>
         </div>
-        <Stagger className="mt-12 grid gap-4 md:grid-cols-3">
+        <Stagger className="mt-8 sm:mt-12 grid gap-4 md:grid-cols-3">
           {c.highlights.map((h, i) => {
             const Icon = miniIcons[i % miniIcons.length];
             return (
@@ -146,13 +146,13 @@ export function ProjectView({ project, locale }: { project: Project; locale: Loc
         <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
           <Reveal>
             <span className="inline-flex rounded-full bg-sunken px-3 py-1 text-xs font-bold uppercase tracking-widest text-muted">{t.project.resourcesPill}</span>
-            <h2 className="display mt-5 text-4xl sm:text-5xl">{t.project.resources}</h2>
+            <h2 className="display mt-5 text-[1.85rem] sm:text-5xl">{t.project.resources}</h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-lg leading-relaxed text-muted">{t.project.resourcesLede}</p>
+            <p className="text-base leading-relaxed sm:text-lg text-muted">{t.project.resourcesLede}</p>
           </Reveal>
         </div>
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 sm:mt-12 grid gap-4 md:grid-cols-3">
           {playbooks.map((pb, i) => (
             <Reveal key={pb.slug} delay={i * 0.08} className="h-full">
               <PlaybookCard2 pb={pb} locale={locale} pagesLabel={t.playbooks.pages} />

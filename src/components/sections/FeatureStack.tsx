@@ -40,8 +40,8 @@ export function FeatureStack({ title, lede, steps, arts, locale }: { title: stri
   return (
     <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
       <div className="lg:sticky lg:top-32 lg:h-fit">
-        <h2 className="display text-4xl sm:text-5xl">{title}</h2>
-        <p className="mt-5 text-lg leading-relaxed text-muted">{lede}</p>
+        <h2 className="display text-[1.85rem] sm:text-5xl">{title}</h2>
+        <p className="mt-5 text-base leading-relaxed sm:text-lg text-muted">{lede}</p>
         <ol className="relative mt-10 hidden gap-1 border-l-2 border-line pl-6 lg:grid">
           <motion.span
             className="absolute -left-0.5 top-0 w-0.5 bg-brand"

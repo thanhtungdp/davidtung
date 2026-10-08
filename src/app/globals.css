@@ -126,16 +126,6 @@
   @media (min-width: 640px) { .container-x { padding-inline: 1.5rem; } }
   @media (min-width: 1024px) { .container-x { padding-inline: 2rem; } }
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brand);
-  }
 
   .display {
     font-weight: 800;
